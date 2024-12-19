@@ -21,3 +21,9 @@ export default function Index() {
         </>
     )
 }
+
+export async function getStaticProps() {
+    return {
+        props: {}
+    }
+}

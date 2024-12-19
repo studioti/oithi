@@ -1,13 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  	/* config options here */
 	
-	reactStrictMode: true,
-
-	output: 'export', // This will make our build static
-
-	distDir: 'build',
+	output: 'export',
 
 	sassOptions: {
 		implementation: 'sass-embedded'
