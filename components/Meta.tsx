@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from 'react-helmet'
-import { GoogleFonts } from "next-google-fonts"
 
 export default function Meta({...props}) {
     return (
@@ -43,9 +42,11 @@ export default function Meta({...props}) {
             <meta name="theme-color" content="#000" />
 
             {/* google fonts */}
-            <GoogleFonts href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
-            <GoogleFonts href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" />
-            <GoogleFonts href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
             
             <body className={props.bodyClass} />
         </Helmet>
