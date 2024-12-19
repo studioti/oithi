@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	
-	output: 'export',
-
 	sassOptions: {
 		implementation: 'sass-embedded'
 	},
@@ -16,6 +13,9 @@ const nextConfig: NextConfig = {
 export default nextConfig
 
 module.exports = {
+
+	output: "export",
+	
 	async redirects() {
 		return [
 			{
