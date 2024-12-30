@@ -44,6 +44,5 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Author
 
-**Thiago Aguiar**
 - [Linkedin](https://www.linkedin.com/in/oithi)
 - Email: thiago.aguiar86@gmail.com
