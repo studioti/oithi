@@ -1,0 +1,27 @@
+import Col from 'react-bootstrap/Col'
+import Figure from 'react-bootstrap/Figure'
+
+export default function Description({...props}) {
+    // props somente leitura
+    return (
+        <>
+            <Col xs={12} lg={6} className={props.scssDescription}>
+                <div className={props.scssBox}>
+                    <div>
+                        <Figure>
+                            <Figure.Image
+                                alt='Thiago Aguiar'
+                                src='about/thiago_aguiar.jpg'
+                                fluid
+                                roundedCircle
+                            />
+                        </Figure>                                    
+                        <h3>Thiago Aguiar</h3>
+                        <p>Thiago é um especialista em tecnologia com 15 anos de experiência em desenvolvimento front-end. Formado em Análise e Desenvolvimento de Sistemas pela FIAP (2009), construiu sua carreira em agências de marketing digital e grandes grupos de mídia em São Paulo.</p>
+                        <p className='mb-0'>Com sólida experiência, criou diversos sites, landing pages, interfaces web para sistemas e portais de notícias, além de realizar integrações com API&rsquo;s e manutenção contínua de projetos. Também atua como freelancer, entregando soluções para diversos clientes e negócios.</p>
+                    </div>
+                </div>
+            </Col>
+        </>
+    )
+}

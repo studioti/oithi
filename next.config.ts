@@ -10,19 +10,24 @@ const nextConfig: NextConfig = {
 	}
 }
 
+module.exports = {
+	output: 'export',
+	compress: true,	
+	trailingSlash: false,
+	images: { 
+		unoptimized: true
+	},
+	// async redirects() {
+	// 	return [
+	// 		{
+	// 			source: '/pages',
+	// 			destination: '/',
+	// 			permanent: true
+	// 		}
+	// 	]
+	// }
+}
+
 export default nextConfig
 
-module.exports = {
 
-	output: "export",
-	
-	async redirects() {
-		return [
-			{
-				source: '/pages',
-				destination: '/',
-				permanent: true
-			}
-		]
-	}
-}

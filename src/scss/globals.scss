@@ -19,14 +19,23 @@ body {
 	font-family: "Poiret One", Arial, Helvetica, sans-serif;
 	font-size: 1em;
 	font-weight: 300;
-	line-height: 1.5em;
+	line-height: 1.7em;
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
 	color: variables.$primary;
 	background-color: variables.$black;
-	overflow-x: hidden;
-
+	&::before {
+		content: '';
+		width: 130px;
+		height: 1px;
+		background-color: variables.$fifteen;
+		position: fixed;
+		top: 50%;
+		right: 0;
+		margin: -1px 0 0 0;
+		z-index: 1000;
+	}
 	&::-webkit-scrollbar {
 		width: 2px;
 	}
@@ -55,7 +64,8 @@ h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
 }
-.ratio-16x9 {
+.ratio-16x9,
+.ratio-4x3 {
 	min-width: 100%;
 	min-height: 100dvh;
 	position: absolute;
@@ -66,26 +76,158 @@ h1, h2, h3, h4 {
 		min-height: 100dvh;
 	}
 }
-
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) {
+#__next {
 	.ratio > * {
 		width: auto;
 		height: 100dvh;
 	}
 }
+.seta_navegacao {
+	position: absolute;
+	left: 50%;
+	margin: 0 0 0 -100px;
+	width: 200px;
+	height: 150px;
+	z-index: 1000;
+	display: none;
+	&.top {
+		top: 0;
+		background: url('/bg-seta-top.png') 0 -30px no-repeat;
+		background-size: 100% auto;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin: 0 0 0 -25px;
+			width: 50px;
+			height: 50px;
+			background: url('/seta-cima.svg') center no-repeat;
+			background-size: 100% auto;
+		}
+	}
+	&.bottom {
+		bottom: -1px;
+		width: 280px;
+		margin: 0 0 0 -140px;
+		background: url('/bg-seta-bottom.png') 0 30px no-repeat;
+		background-size: 90% auto;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin: 0 0 0 -25px;
+			width: 50px;
+			height: 50px;
+			background: url('/seta-baixo.svg') center no-repeat;
+			background-size: 100% auto;
+		}
+	}
+}
+.socialmedia {
+	position: absolute;
+	width: 130px;
+	height: 60px;
+	// border: 1px dotted purple;
+	display: flex;
+	align-items: center;
+	align-self: center;
+	justify-content: space-between;
+	z-index: 1000;
+}
+#__next {
+	#header {
+		.socialmedia {
+			top: 10px;
+			left: 50%;
+			margin: 0 0 0 -65px;
+		}
+	}
+	#footer {
+		.socialmedia {
+			bottom: 10px;
+			left: 50%;
+			margin: 0 0 0 -65px;
+		}
+	}
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+	/* Styles for portrait orientation */
+	#__next {
+		#projects,
+		#footer {
+			.ratio > * {
+				min-width: auto;
+				min-height: auto;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {}
+
+// Medium devices (992px and down)
+@media (max-width: 992px) {
+	#__next {
+		.ratio > * {
+			width: auto;
+			height: 100dvh;
+		}
+	}
+}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+	.seta_navegacao {
+		&.top,
+		&.bottom {
+			&::after {
+				margin: 0 0 0 -40px;
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+	body {
+		overflow: hidden;
+	}
+	.seta_navegacao {
+		display: block;
+	}
+}
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {}
+// XX-Large devices (larger desktops, 1600px and up)
+@media (min-width: 1440px) {
+	#__next {
+		.ratio > * {
+			min-width: inherit;
+			min-height: inherit;
+			width: auto; // 100%
+			height: 100%;
+		}
+		#projects,
+		#footer {
+			.ratio > * {
+				min-width: inherit;
+				min-height: inherit;
+				width: auto; // 100%
+				height: 80%;
+			}
+		}
+	}
+}

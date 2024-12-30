@@ -1,4 +1,45 @@
 {
+  "components\\Footer.tsx -> ./pages/Video": {
+    "id": 8216,
+    "files": [
+      "static/chunks/216.b6e566c798d58525.js"
+    ]
+  },
+  "components\\Header.tsx -> ./pages/Video": {
+    "id": 8216,
+    "files": [
+      "static/chunks/216.b6e566c798d58525.js"
+    ]
+  },
+  "components\\Layout.jsx -> ../components/Footer": {
+    "id": 4507,
+    "files": [
+      "static/css/8cbfe97205e6724e.css",
+      "static/chunks/430.7685e08ed4c8aa9d.js",
+      "static/chunks/507.31d22c0f77d802ad.js"
+    ]
+  },
+  "components\\Layout.jsx -> ../components/Header": {
+    "id": 8497,
+    "files": [
+      "static/css/1cd0d3ab24d3ff7d.css",
+      "static/chunks/430.7685e08ed4c8aa9d.js",
+      "static/chunks/497.9e1bf6689ee1488d.js"
+    ]
+  },
+  "components\\pages\\Projects.tsx -> ../pages/Video": {
+    "id": 8216,
+    "files": [
+      "static/chunks/835.93ea13f0f49a4371.js"
+    ]
+  },
+  "components\\pages\\Sites.tsx -> ./projects/Site": {
+    "id": 6357,
+    "files": [
+      "static/chunks/430.7685e08ed4c8aa9d.js",
+      "static/chunks/357.00c8229af7987698.js"
+    ]
+  },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
     "id": 1484,
     "files": [
@@ -9,6 +50,29 @@
     "id": 3709,
     "files": [
       "static/chunks/709.e04b3301a1eba8ef.js"
+    ]
+  },
+  "pages\\index.tsx -> ../components/pages/About": {
+    "id": 6303,
+    "files": [
+      "static/css/cb94d4afd3b4794e.css",
+      "static/chunks/430.7685e08ed4c8aa9d.js",
+      "static/chunks/303.2a5bf9b698bfa8f7.js"
+    ]
+  },
+  "pages\\index.tsx -> ../components/pages/Projects": {
+    "id": 7723,
+    "files": [
+      "static/css/f2e5e9a457930afe.css",
+      "static/chunks/430.7685e08ed4c8aa9d.js",
+      "static/chunks/723.7732212e83c3d91b.js"
+    ]
+  },
+  "pages\\index.tsx -> ../components/pages/Sites": {
+    "id": 2773,
+    "files": [
+      "static/css/8ade338a507ff414.css",
+      "static/chunks/773.5f67b00b94615691.js"
     ]
   }
 }

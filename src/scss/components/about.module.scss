@@ -1,0 +1,191 @@
+/*
+####################################################
+ABOUT
+####################################################	
+*/
+
+@use '../variables';
+
+.about {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    background-color: variables.$seventeen;
+    overflow: hidden;
+    z-index: 999;
+    p, li, span {
+        font-size: 1.25em;
+        font-weight: 500;
+        text-justify: distribute;
+        text-align: justify;
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+    }
+    ul, li {
+        list-style: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    li {
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 .7em 0;
+    }
+    h3 {
+        font-family: "MS Madi", Arial, Helvetica, sans-serif;
+        font-size: 2.8em;
+        line-height: 1.2em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    img {
+        margin: 0;
+        padding: 0;
+    }
+    .content {
+        position: relative;
+        height: auto;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px variables.$black;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: variables.$secondary;
+            outline: 1px solid transparent;
+        }
+        .description,
+        .knowhow {
+            figure {
+                height: 150px;
+                margin: 0 auto 10px;
+                display: flex;
+                align-items: center;
+                align-self: center;
+                justify-content: center;
+            }
+            img {
+                display: block;
+            }
+        }
+        .description {
+            img {
+                height: 140px;
+            }
+        }
+        .knowhow {
+            text-align: center;
+            img {
+                height: 120px;
+            }
+        }
+        .description,
+        .knowhow,
+        .worked {
+            min-height: 50dvh;
+            height: auto;
+        }
+        .worked {
+            h3 {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        align-items: flex-start;
+        align-self: center;
+        justify-content: center;
+    }
+    .enterprise {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        figure {
+            margin: 15px 20px;
+        }
+    }
+}
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-height: 799px) {
+    .about {
+        .content {
+            .worked {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (min-height: 800px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .about {
+        h3 {
+            font-size: 3.4em;
+        }
+        .content {
+            .description {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .about {
+        height: 100dvh;
+        .content {
+            position: absolute;
+            height: 100dvh;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) and (min-height: 1200px) {
+    .about {
+        .content {
+            .description,
+            .knowhow,
+            .worked {
+                display: flex;
+                align-items: center;
+                align-self: center;
+                justify-content: center;
+            }
+        }
+    }
+}
