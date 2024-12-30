@@ -1,6 +1,6 @@
 ![Thumb do projeto](https://oithi.com.br/thumb.jpg)
 
-# Portfolio | 2025 - Thiago Aguiar (Oi, Thi!) - Frontend Developer
+# Portfolio - Thiago Aguiar - Frontend Developer
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -47,4 +47,4 @@ To learn more about Next.js, take a look at the following resources:
 * **Thiago Aguiar** 
 
 - [Linkedin](https://www.linkedin.com/in/oithi)
-- [Email](thiago.aguiar86@gmail.com)
+- Email: thiago.aguiar86@gmail.com

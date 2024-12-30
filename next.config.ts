@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
 	sassOptions: {
 		implementation: 'sass-embedded'
 	},
-
 	compiler: {
 		styledComponents: true
 	}
@@ -12,8 +11,8 @@ const nextConfig: NextConfig = {
 
 module.exports = {
 	output: 'export',
-	compress: true,	
 	trailingSlash: false,
+	compress: true,
 	images: { 
 		unoptimized: true
 	},
