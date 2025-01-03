@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react'
 import Link from 'next/link'
-import Ratio from 'react-bootstrap/Ratio'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import scss from '../../src/scss/components/projects.module.scss'
@@ -17,15 +16,6 @@ export default function Projects() {
                         <Video name='projects' aspect='4x3' />
                     </div>
                 </Suspense>
-
-                <div className={scss.video}>
-                    <Ratio aspectRatio='4x3'>
-                        <video autoPlay playsInline muted loop preload="none">
-                            <source src="/video/projects.mp4"   type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </Ratio>
-                </div>
                 
                 <OverlayTrigger overlay={<Tooltip>Sobre mim</Tooltip>} placement="bottom">
                     <Link href='#about' className={'seta_navegacao top'}></Link>
