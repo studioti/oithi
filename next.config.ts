@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
 
 module.exports = {
 	output: 'export',
-	trailingSlash: false,
+	trailingSlash: true,
 	compress: true,
 	images: { 
 		unoptimized: true
