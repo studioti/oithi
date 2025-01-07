@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
 }
 
 module.exports = {
-	output: 'export',
+	// output: 'export',
 	trailingSlash: true,
 	compress: true,
 	images: { 
