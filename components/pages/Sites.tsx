@@ -1,32 +1,65 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 const Site = lazy(() => import('./projects/Site'))
 import scss from '../../src/scss/components/sites.module.scss'
 
+const API = '/api/sites/'
+
 export default function Sites() {
+
+    const [loading, setLoading] = useState(false)
+    const [data, setData] = useState([])
+    const [sites, setsites] = useState([])
+
+    const getAPISites = async () => {
+        try {
+            
+            setLoading(true)
+
+            const response = await fetch(API)
+            const data = await response.json()
+
+            if(!data) throw 'Problema com a requisição'
+            
+            setData(data)
+
+            const result = data.cases
+            const sites:any = Object.values(result)
+
+            setsites(sites)
+
+            console.log('response', response)
+            console.log('api sites:', sites)
+
+        } catch (error) {
+            console.log(error)
+
+        } finally {
+            setLoading(false)
+
+        }
+    }
+
+    useEffect( () => {
+        getAPISites()
+    }, [])
+    
     return (
         <>
             <Suspense fallback={<div>Carregando ...</div>}>
-                <section className={`${scss.sites} ${scss.reserva}`}>
-                    <Site scssName='sites' scssPos='1' scssSide={scss.left} scssAnchorUp='projects' scssAnchorDown='site2' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
-                <section className={`${scss.sites} ${scss.potencial}`}>
-                    <Site scssName='sites' scssPos='2' scssSide={scss.right} scssAnchorUp='site1' scssAnchorDown='site3' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
-                <section className={`${scss.sites} ${scss.cardapio}`}>
-                    <Site scssName='sites' scssPos='3' scssSide={scss.left} scssAnchorUp='site2' scssAnchorDown='site4' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
-                <section className={`${scss.sites} ${scss.wavoleibol}`}>
-                    <Site scssName='sites' scssPos='4' scssSide={scss.right} scssAnchorUp='site3' scssAnchorDown='site5' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
-                <section className={`${scss.sites} ${scss.primora}`}>
-                    <Site scssName='sites' scssPos='5' scssSide={scss.left} scssAnchorUp='site4' scssAnchorDown='site6' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
-                <section className={`${scss.sites} ${scss.fgv}`}>
-                    <Site scssName='sites' scssPos='6' scssSide={scss.right} scssAnchorUp='site5' scssAnchorDown='site7' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
-                <section className={`${scss.sites} ${scss.blindex}`}>
-                    <Site scssName='sites' scssPos='7' scssSide={scss.left} scssAnchorUp='site6' scssAnchorDown='footer' scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                </section>
+                {
+                    loading && !data &&
+                    <span>Carregando...</span>
+                }
+                {
+                    sites.map( (item, index) => {
+                        const size = sites.length
+                        return (
+                            <section className={`${scss.sites} ${scss[item['nome']]} ${size}`} key={index}>
+                                <Site scssName='sites' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
+                            </section>
+                        )
+                    })
+                }
             </Suspense>
         </>
     )

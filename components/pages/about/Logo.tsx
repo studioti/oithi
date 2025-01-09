@@ -7,6 +7,7 @@ export default function Logo({...props}) {
             <Figure>
                 <Figure.Image
                     alt={props.alt}
+                    title={props.title}
                     src={`${props.path}/${props.name}.png`}
                     width={props.size}
                 />
