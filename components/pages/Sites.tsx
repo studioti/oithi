@@ -27,8 +27,8 @@ export default function Sites() {
 
             setsites(sites)
 
-            console.log('response', response)
-            console.log('api sites:', sites)
+            // console.log('response', response)
+            // console.log('api sites:', sites)
 
         } catch (error) {
             console.log(error)
