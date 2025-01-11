@@ -10,12 +10,12 @@ const nextConfig: NextConfig = {
 }
 
 module.exports = {
-	// output: 'export',
 	trailingSlash: true,
 	compress: true,
 	images: { 
 		unoptimized: true
 	},
+	// output: 'export',
 	// async redirects() {
 	// 	return [
 	// 		{
