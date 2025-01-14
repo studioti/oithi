@@ -1,6 +1,6 @@
 import { lazy, Suspense} from 'react'
-import scss from '../../src/scss/components/sites.module.scss'
 import { useQuery } from '@tanstack/react-query'
+import scss from '../../src/scss/components/sites.module.scss'
 
 const Site = lazy(() => import('./projects/Site'))
 const API = '/api/sites/'
@@ -32,29 +32,37 @@ export default function Sites() {
         }
     }
 
-    const {data, isLoading} = useQuery({
+    const {data, error, isLoading} = useQuery({
         queryKey: ['sites'],
         queryFn: getSites
     })
-    
-    return (
+
+    if(error)
         <>
-            <Suspense fallback={<div>Carregando ...</div>}>
-                {
-                    isLoading && !data &&
-                    <span>Carregando...</span>
-                }
-                {
-                    data?.map( (item:any, index:any) => {
-                        const size = data.length
-                        return (
-                            <section className={`${scss.sites} ${scss[item['nome']]} ${size}`} key={index}>
-                                <Site scssName='sites' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
-                            </section>
-                        )
-                    })
-                }
-            </Suspense>
+            <div>
+                <p>{error.message}</p>
+            </div>
         </>
-    )
+    
+    if(data)
+        return (
+            <>
+                <Suspense fallback={<div>Carregando ...</div>}>
+                    {
+                        isLoading && !data &&
+                        <span>Carregando...</span>
+                    }
+                    {
+                        data?.map( (item:any, index:any) => {
+                            const size = data.length
+                            return (
+                                <section className={`${scss.sites} ${scss[item['nome']]} ${size}`} key={index}>
+                                    <Site scssName='sites' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
+                                </section>
+                            )
+                        })
+                    }
+                </Suspense>
+            </>
+        )
 }
