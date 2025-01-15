@@ -9,11 +9,11 @@ export default function Site({...props}) {
     return (
         <>
             <OverlayTrigger overlay={<Tooltip>Ver projetos</Tooltip>} placement="bottom">
-                <Link href={`#${props.scssAnchorUp}`} className={'seta_navegacao top'}></Link>
+                <Link href={`#${props.scssAnchorUp}`} className={'seta_navegacao top'} aria-label={`Acessando o ${props.scssAnchorDown}`}></Link>
             </OverlayTrigger>
 
             <OverlayTrigger overlay={<Tooltip>Ver projetos</Tooltip>} placement="top">
-                <Link href={`#${props.scssAnchorDown}`} className={'seta_navegacao bottom'}></Link>
+                <Link href={`#${props.scssAnchorDown}`} className={'seta_navegacao bottom'} aria-label={`Acessando o ${props.scssAnchorDown}`}></Link>
             </OverlayTrigger>
 
             <div className={`${props.scssBox} ${props.scssSide}`} id={`site${props.scssPos}`}>

@@ -7,7 +7,7 @@ const Projects = lazy(() => import('../components/pages/Projects'))
 const Sites = lazy(() => import('../components/pages/Sites'))
 
 export const metadata: Metadata = {
-    title: 'Thiago Aguiar • Front-end Developer'
+    title: 'Home • Thiago Aguiar • Front-end Developer'
 }
 
 export default function Index() {

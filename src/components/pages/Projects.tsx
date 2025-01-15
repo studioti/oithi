@@ -18,11 +18,11 @@ export default function Projects() {
                 </Suspense>
                 
                 <OverlayTrigger overlay={<Tooltip>Sobre mim</Tooltip>} placement="bottom">
-                    <Link href='#about' className={'seta_navegacao top'}></Link>
+                    <Link href='#about' className={'seta_navegacao top'} aria-label="Acessar a área Sobre mim"></Link>
                 </OverlayTrigger>
 
                 <OverlayTrigger overlay={<Tooltip>Ver projetos</Tooltip>} placement="top">
-                    <Link href='#site1' className={'seta_navegacao bottom'}></Link>
+                    <Link href='#site1' className={'seta_navegacao bottom'} aria-label="Acessar a área Cases"></Link>
                 </OverlayTrigger>
                 
                 <h2>RECENT <br />PROJECTS</h2>

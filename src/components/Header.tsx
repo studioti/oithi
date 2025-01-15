@@ -18,7 +18,7 @@ export default function Header() {
             </Suspense>
 
             <OverlayTrigger overlay={<Tooltip>Sobre mim</Tooltip>} placement="top">
-                <Link href='#about' rel='navegacao' className={'seta_navegacao bottom'}></Link>
+                <Link href='#about' rel='navegacao' className={'seta_navegacao bottom'} aria-label="Acessar a área Sobre mim"></Link>
             </OverlayTrigger>
 
             <SocialMedia urlGit='https://github.com/studioti/oithi' urlLinkedin='https://www.linkedin.com/in/oithi' color='#000000' />

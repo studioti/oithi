@@ -25,11 +25,11 @@ export default function About() {
                 </div>
 
                 <OverlayTrigger overlay={<Tooltip>Voltar ao início</Tooltip>} placement="bottom">
-                    <Link href='#header' className={'seta_navegacao top'}></Link>
+                    <Link href='#header' className={'seta_navegacao top'} aria-label="Ir para o começo do site"></Link>
                 </OverlayTrigger>
                 
                 <OverlayTrigger overlay={<Tooltip>Projetos recentes</Tooltip>} placement="top">
-                    <Link href='#projects' className={'seta_navegacao bottom'}></Link>
+                    <Link href='#projects' className={'seta_navegacao bottom'} aria-label="Acessar a área de Projetos Recentes"></Link>
                 </OverlayTrigger>
 
                 <Container fluid className={scss.content}>

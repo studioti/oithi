@@ -25,7 +25,7 @@ export default function Footer() {
             <SocialMedia urlGit='https://github.com/studioti/oithi' urlLinkedin='https://www.linkedin.com/in/oithi' color='#c4fd67' />
 
             <OverlayTrigger overlay={<Tooltip>Voltar ao início</Tooltip>} placement="bottom">
-                <Link href='#header' className={'seta_navegacao top'}></Link>
+                <Link href='#header' className={'seta_navegacao top'} aria-label="Ir para o começo do site"></Link>
             </OverlayTrigger>
 
             <Container fluid className={scss.content}>
@@ -47,7 +47,7 @@ export default function Footer() {
                             </Col>
                             <Col xs={12} className={scss.cta}>
                                 <div className={scss.box}>
-                                    <Link href='https://wa.me/5511952718004?text=Olá,%20Thiago!%20Tudo%20bem?%20Tenho%20interesse%20em%20te%20contratar!%20Você%20teria%20disponibilidade?' aria-label="Chat on WhatsApp">
+                                    <Link href='https://wa.me/5511952718004?text=Olá,%20Thiago!%20Tudo%20bem?%20Tenho%20interesse%20em%20te%20contratar!%20Você%20teria%20disponibilidade?' aria-label="Me chame no WhatsApp!">
                                         <span>CALL ME !!!</span>
                                     </Link>
                                 </div>
