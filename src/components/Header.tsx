@@ -3,7 +3,7 @@ import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import SocialMedia from './pages/SocialMedia'
-import scss from '../src/scss/components/header.module.scss'
+import scss from '../scss/components/header.module.scss'
 
 const Video = lazy(() => import('./pages/Video'))
 
@@ -18,7 +18,7 @@ export default function Header() {
             </Suspense>
 
             <OverlayTrigger overlay={<Tooltip>Sobre mim</Tooltip>} placement="top">
-                <Link href='#about' rel='navegacao' className={'seta_navegacao bottom'}></Link>
+                <Link href='bunda' rel='navegacao' className={'seta_navegacao bottom'}></Link>
             </OverlayTrigger>
 
             <SocialMedia urlGit='https://github.com/studioti/oithi' urlLinkedin='https://www.linkedin.com/in/oithi' color='#000000' />

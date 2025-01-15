@@ -1,3 +1,5 @@
+'use client'
+
 import Col from 'react-bootstrap/Col'
 import Figure from 'react-bootstrap/Figure'
 

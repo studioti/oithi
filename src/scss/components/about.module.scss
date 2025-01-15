@@ -39,7 +39,8 @@ ABOUT
         padding: 0 0 .7em 0;
     }
     h3 {
-        font-family: "MS Madi", Arial, Helvetica, sans-serif;
+        // font-family: "MS Madi", Arial, Helvetica, sans-serif;
+        font-family: var(--font-msmadi);
         font-size: 2.8em;
         line-height: 1.2em;
         text-align: center;

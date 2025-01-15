@@ -106,7 +106,8 @@ FOOTER
     }
     .cta,
     .address {
-        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+        // font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+	    font-family: var(--font-bebasneue);
         font-size: 2.5em;
         line-height: 1.2em;
         color: variables.$tenth;
@@ -142,7 +143,8 @@ FOOTER
         align-items: center;
         align-self: center;
         justify-content: center;
-        font-family: "MS Madi", Arial, Helvetica, sans-serif;
+        // font-family: "MS Madi", Arial, Helvetica, sans-serif;
+        font-family: var(--font-msmadi);
         color: variables.$white;
         font-size: 5em;
         line-height: .9em;

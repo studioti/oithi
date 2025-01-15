@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import scss from '../src/scss/components/footer.module.scss'
+import scss from '../scss/components/footer.module.scss'
 
 const Video = lazy(() => import('./pages/Video'))
 

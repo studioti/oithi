@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
@@ -9,7 +11,7 @@ import Description from './about/Description'
 import Knowhow from './about/KnowHow'
 import Worked from './about/Worked'
 
-import scss from '../../src/scss/components/about.module.scss'
+import scss from '../../scss/components/about.module.scss'
 
 export default function About() {
     return (

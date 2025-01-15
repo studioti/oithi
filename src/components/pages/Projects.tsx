@@ -2,9 +2,9 @@ import { lazy, Suspense } from 'react'
 import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
-import scss from '../../src/scss/components/projects.module.scss'
+import scss from '../../scss/components/projects.module.scss'
 
-const Video = lazy(() => import('../pages/Video'))
+const Video = lazy(() => import('./Video'))
 
 export default function Projects() {
     return (
