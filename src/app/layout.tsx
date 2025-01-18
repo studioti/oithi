@@ -38,6 +38,10 @@ const bungeeinline = Bungee_Inline({
 
 if(process.env.NODE_ENV === 'development') {
     process.env.NEXT_PUBLIC_BASE_URL = 'http://localhost:3000/'
+
+} else if(process.env.NODE_ENV === 'production') {
+    process.env.NEXT_PUBLIC_BASE_URL = 'https://oithi.com.br/'
+    
 }
 
 export const metadata: Metadata = {
