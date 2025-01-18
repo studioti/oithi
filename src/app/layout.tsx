@@ -36,14 +36,6 @@ const bungeeinline = Bungee_Inline({
     preload: false
 })
 
-if(process.env.NODE_ENV === 'development') {
-    process.env.NEXT_PUBLIC_BASE_URL = 'http://localhost:3000/'
-
-} else if(process.env.NODE_ENV === 'production') {
-    process.env.NEXT_PUBLIC_BASE_URL = 'https://oithi.com.br/'
-    
-}
-
 export const metadata: Metadata = {
     description: 'Thiago é um especialista em tecnologia com 15 anos de experiência em desenvolvimento front-end. Formado em Análise e Desenvolvimento de Sistemas pela FIAP (2009), construiu sua carreira em agências de marketing digital e grandes grupos de mídia em São Paulo. Com sólida experiência, criou sites, landing pages, interfaces web para sistemas, portais de notícias e PWA’s, além de realizar integrações com APIs e manutenção contínua de projetos.',
     keywords: 'Frontend, Front-end, Vue JS, Nuxt JS, React JS, Next JS, Git, Profissional de tecnologia, Tecnologia, Web, CSS, HTML, Javascript, Sass, Bootstrap, Desenvolvimento de Sites',
