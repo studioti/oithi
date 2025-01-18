@@ -4,7 +4,7 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 const Site = lazy(() => import('./projects/Site'))
 import scss from '../../scss/components/sites.module.scss'
 
-const API = '/api/sites/'
+const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
 
 export default function Sites() {
 
@@ -17,7 +17,7 @@ export default function Sites() {
             
             setLoading(true)
 
-            const response = await fetch(API)
+            const response = await fetch(API_CASES)
             const data = await response.json()
 
             if(!data) throw 'Problema com a requisição'

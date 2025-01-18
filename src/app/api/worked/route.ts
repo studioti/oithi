@@ -8,7 +8,7 @@ export async function GET() {
             // Authorization: `Bearer ${token}`
         }
     }
-    const response =  await fetch('https://oithi-api.netlify.app/.netlify/functions/empresas', options)
+    const response =  await fetch(`${process.env.API_URL}empresas`, options)
     const data = await response.json()
     return Response.json(data)
 }

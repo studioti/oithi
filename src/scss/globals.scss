@@ -90,7 +90,8 @@ h1, h2, h3, h4 {
 	height: 150px;
 	z-index: 1000;
 	display: none;
-	&.top {
+	&.top,
+	&.error {
 		top: 0;
 		background: url('/bg-seta-top.png') 0 -30px no-repeat;
 		background-size: 100% auto;
@@ -122,6 +123,14 @@ h1, h2, h3, h4 {
 			height: 50px;
 			background: url('/seta-baixo.svg') center no-repeat;
 			background-size: 100% auto;
+		}
+	}
+	&.error {
+		display: block;
+		&::after {
+			margin: 0 0 0 -40px;
+			width: 80px;
+			height: 80px;
 		}
 	}
 }
@@ -181,12 +190,33 @@ h1, h2, h3, h4 {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 	.seta_navegacao {
+		&.error,
 		&.top,
 		&.bottom {
 			&::after {
 				margin: 0 0 0 -40px;
 				width: 80px;
 				height: 80px;
+			}
+		}
+		&.error {
+			display: block;
+			left: 76px;
+			top: 50%;
+			width: 280px;
+			margin: -50px 0 0 -140px;
+			background: url('/bg-seta-bottom.png') 0 30px no-repeat;
+			background-size: 90% auto;
+			transform: rotate(90deg);
+			&::after {
+				content: '';
+				position: absolute;
+				top: inherit;
+				bottom: 0;
+				top: 71px;
+				left: 50%;
+				background: url('/seta-baixo.svg') center no-repeat;
+				background-size: 100% auto;
 			}
 		}
 	}

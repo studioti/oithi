@@ -1,41 +1,46 @@
- import type { Metadata } from "next"
- import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline } from 'next/font/google'
- import '../scss/globals.scss'
- import scss from "../scss/index.module.scss"
+import type { Metadata } from "next"
+import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline } from 'next/font/google'
 
- const bebasneue = Bebas_Neue({
-     subsets: ['latin'],
-     display: 'swap',
-     weight: "400",
-     variable: '--font-bebasneue',
-     preload: false
- })
- 
- const msmadi = Ms_Madi({
-     subsets: ['latin'],
-     display: 'swap',
-     weight: "400",
-     variable: '--font-msmadi',
-     preload: false
- })
+import '../scss/globals.scss'
+import scss from "../scss/index.module.scss"
 
- const poiretone = Poiret_One({
-     subsets: ['latin'],
-     display: 'swap',
-     weight: "400",
-     variable: '--font-poiretone',
-     preload: false
- })
+const bebasneue = Bebas_Neue({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400",
+    variable: '--font-bebasneue',
+    preload: false
+})
 
- const bungeeinline = Bungee_Inline({
-     subsets: ['latin'],
-     display: 'swap',
-     weight: "400",
-     variable: '--font-bungeeinline',
-     preload: false
- })
+const msmadi = Ms_Madi({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400",
+    variable: '--font-msmadi',
+    preload: false
+})
 
- export const metadata: Metadata = {
+const poiretone = Poiret_One({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400",
+    variable: '--font-poiretone',
+    preload: false
+})
+
+const bungeeinline = Bungee_Inline({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400",
+    variable: '--font-bungeeinline',
+    preload: false
+})
+
+if(process.env.NODE_ENV === 'development') {
+    process.env.NEXT_PUBLIC_BASE_URL = 'http://localhost:3000/'
+}
+
+export const metadata: Metadata = {
     description: 'Thiago é um especialista em tecnologia com 15 anos de experiência em desenvolvimento front-end. Formado em Análise e Desenvolvimento de Sistemas pela FIAP (2009), construiu sua carreira em agências de marketing digital e grandes grupos de mídia em São Paulo. Com sólida experiência, criou sites, landing pages, interfaces web para sistemas, portais de notícias e PWA’s, além de realizar integrações com APIs e manutenção contínua de projetos.',
     keywords: 'Frontend, Front-end, Vue JS, Nuxt JS, React JS, Next JS, Git, Profissional de tecnologia, Tecnologia, Web, CSS, HTML, Javascript, Sass, Bootstrap, Desenvolvimento de Sites',
     title: 'Thiago Aguiar • Front-end Developer',
@@ -43,115 +48,115 @@
         name: 'Thiago Aguiar'
     },
     openGraph: {
-        url: 'https://oithi.com.br/',
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
         title: 'Thiago Aguiar • Front-end Developer',
         description: 'Thiago é um especialista em tecnologia com 15 anos de experiência em desenvolvimento front-end. Formado em Análise e Desenvolvimento de Sistemas pela FIAP (2009), construiu sua carreira em agências de marketing digital e grandes grupos de mídia em São Paulo.',
         images: {
-            url: 'https://oithi.com.br/thumb.jpg'
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}thumb.jpg`
         }
     },
     icons: [
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-57x57.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-57x57.png`,
             sizes: '57x57'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-60x60.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-60x60.png`,
             sizes: '60x60'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-72x72.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-72x72.png`,
             sizes: '72x72'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-76x76.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-76x76.png`,
             sizes: '76x76'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-114x114.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-114x114.png`,
             sizes: '114x114'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-120x120.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-120x120.png`,
             sizes: '120x120'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-144x144.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-144x144.png`,
             sizes: '144x144'
         },
         {
             rel: 'apple-touch-icon',
-            url: 'https://oithi.com.br/favicon/apple-icon-152x152.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/apple-icon-152x152.png`,
             sizes: '152x152'
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/favicon-32x32.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/favicon-32x32.png`,
             sizes: '32x32',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/favicon-96x96.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/favicon-96x96.png`,
             sizes: '96x96',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/favicon-16x16.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/favicon-16x16.png`,
             sizes: '16x16',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/android-icon-192x192.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/android-icon-192x192.png`,
             sizes: '192x192',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/android-icon-144x144.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/android-icon-144x144.png`,
             sizes: '144x144',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/android-icon-96x96.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/android-icon-96x96.png`,
             sizes: '96x96',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/android-icon-72x72.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/android-icon-72x72.png`,
             sizes: '72x72',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/android-icon-48x48.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/android-icon-48x48.png`,
             sizes: '48x48',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/android-icon-36x36.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/android-icon-36x36.png`,
             sizes: '36x36',
             type: "image/png"
         },
         {
             rel: 'icon',
-            url: 'https://oithi.com.br/favicon/favicon.ico'
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/favicon.ico`
         },
         {
             rel: 'manifest',
-            url: 'https://oithi.com.br/favicon/manifest.json'
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/manifest.json`
         }
     ],
     other: {
@@ -161,11 +166,10 @@
         "msapplication-TileImage": "favicon/ms-icon-144x144.png",
         themeColor: '#000000',
     },
-    manifest: 'https://oithi.com.br/favicon/manifest.json'
- }
+    manifest: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/manifest.json`
+}
  
- export default function RootLayout({ children }: { children: React.ReactNode }) {
-    // return children
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable}`}>
             <body className={scss.index}>

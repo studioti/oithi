@@ -22,7 +22,7 @@ export default function Footer() {
                 </div>
             </Suspense>
             
-            <SocialMedia urlGit='https://github.com/studioti/oithi' urlLinkedin='https://www.linkedin.com/in/oithi' color='#c4fd67' />
+            <SocialMedia urlGit={process.env.NEXT_PUBLIC_GITHUB_URL} urlLinkedin={process.env.NEXT_PUBLIC_LINKEDIN_URL} color='#c4fd67' />
 
             <OverlayTrigger overlay={<Tooltip>Voltar ao início</Tooltip>} placement="bottom">
                 <Link href='#header' className={'seta_navegacao top'} aria-label="Ir para o começo do site"></Link>

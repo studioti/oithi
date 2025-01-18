@@ -2,7 +2,7 @@ import Col from 'react-bootstrap/Col'
 import Logo from './Logo'
 import { useEffect, useState } from 'react'
 
-const API = '/api/worked/'
+const API_EMPRESAS = `${process.env.NEXT_PUBLIC_API_URL}worked`
 
 export default function Worked({...props}) {
 
@@ -15,7 +15,7 @@ export default function Worked({...props}) {
             
             setLoading(true)
 
-            const response = await fetch(API)
+            const response = await fetch(API_EMPRESAS)
             const data = await response.json()
 
             if(!data) throw 'Problema com a requisição'

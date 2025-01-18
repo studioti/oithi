@@ -1,0 +1,78 @@
+/*
+####################################################
+ERROR
+####################################################	
+*/
+
+@use 'variables';
+
+body:has(.error) {
+    background-color: variables.$tenth;
+    &::before {
+        background-color: variables.$black;
+    }
+    .seta_navegacao {
+        &.top {
+            top: inherit;
+            left: 0;
+        }
+    }
+}
+.error {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 999;
+    h1 {
+        font-size: 14em;
+        line-height: .9em;
+        font-weight: 600;
+        color: variables.$black;
+        position: relative;
+        z-index: 100;
+        padding-top: .15em;
+        letter-spacing: .02em;
+    }
+    p {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .error {
+        h1 {
+            font-size: 20em;
+            line-height: .9em;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .error {
+        h1 {
+            font-size: 30em;
+            line-height: .9em;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

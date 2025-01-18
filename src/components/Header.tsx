@@ -21,7 +21,7 @@ export default function Header() {
                 <Link href='#about' rel='navegacao' className={'seta_navegacao bottom'} aria-label="Acessar a área Sobre mim"></Link>
             </OverlayTrigger>
 
-            <SocialMedia urlGit='https://github.com/studioti/oithi' urlLinkedin='https://www.linkedin.com/in/oithi' color='#000000' />
+            <SocialMedia urlGit={process.env.NEXT_PUBLIC_GITHUB_URL} urlLinkedin={process.env.NEXT_PUBLIC_LINKEDIN_URL} color='#000000' />
 
             <div className={scss.art}>
                 <span className={scss.p100}></span>
