@@ -161,6 +161,7 @@ export const metadata: Metadata = {
         "msapplication-TileColor": "#000000",
         "msapplication-TileImage": "favicon/ms-icon-144x144.png",
         themeColor: '#000000',
+        "google-site-verification": 'SUkDocJKfLYqumrzO8cT6dt0AbujY0AECuh0gdmPZHU'
     },
     manifest: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/manifest.json`
 }

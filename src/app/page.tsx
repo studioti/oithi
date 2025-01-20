@@ -10,8 +10,6 @@ export const metadata: Metadata = {
     title: 'Home • Thiago Aguiar • Front-end Developer'
 }
 
-console.log(process.env.NODE_ENV)
-
 export default function Index() {
     return (
         <>
