@@ -155,6 +155,9 @@ SITES
             background-size: 320px auto;
         }
     }
+    button {
+        z-index: 100000;
+    }
 }
 
 // X-Small devices (portrait phones, less than 576px)

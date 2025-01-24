@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { Col, Container, OverlayTrigger, Row, Tooltip } from 'react-bootstrap'
 import { Metadata } from 'next'
 
-import scss from "../scss/error.module.scss"
+// import scss from "../scss/error.module.scss"
+import scss from '@/app/scss/error.module.scss'
 
 export const metadata: Metadata = {
     title: 'Página não encontrada • Thiago Aguiar • Front-end Developer'

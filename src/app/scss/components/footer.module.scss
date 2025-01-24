@@ -153,6 +153,9 @@ FOOTER
             color: variables.$twelfth;
             text-decoration-thickness: 2px;
         }
+        svg {
+            display: inline-block;
+        }
     }
 }
 

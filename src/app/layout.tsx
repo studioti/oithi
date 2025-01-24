@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
 import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline } from 'next/font/google'
 
-import '../scss/globals.scss'
-import scss from "../scss/index.module.scss"
+import '@/app/scss/globals.scss'
+import scss from "@/app/scss/index.module.scss"
+import Cursor from "@/components/utils/Cursor"
 
 const bebasneue = Bebas_Neue({
     subsets: ['latin'],
@@ -170,6 +171,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable}`}>
             <body className={scss.index}>
+                <Cursor />
                 {children}
             </body>
         </html>

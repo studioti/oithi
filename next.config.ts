@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	sassOptions: {
-		implementation: 'sass-embedded'
+  /* config options here */
+  sassOptions: {
+		implementation: 'sass-embedded',
+		silenceDeprecations: ['modern-js-api'],
 	},
 	compiler: {
 		styledComponents: true
@@ -10,23 +12,12 @@ const nextConfig: NextConfig = {
 }
 
 module.exports = {
+	reactStrictMode: false,
 	trailingSlash: true,
 	compress: true,
 	images: { 
 		unoptimized: true
-	},
-	// output: 'export',
-	// async redirects() {
-	// 	return [
-	// 		{
-	// 			source: '/pages',
-	// 			destination: '/',
-	// 			permanent: true
-	// 		}
-	// 	]
-	// }
+	}
 }
 
-export default nextConfig
-
-
+export default nextConfig;

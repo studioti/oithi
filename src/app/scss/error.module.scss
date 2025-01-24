@@ -39,6 +39,9 @@ body:has(.error) {
         padding-top: .15em;
         letter-spacing: .02em;
     }
+    h2 {
+        font-size: 1.7em;
+    }
     p {
         font-size: 1.2em;
         font-weight: 500;
@@ -68,11 +71,20 @@ body:has(.error) {
             font-size: 30em;
             line-height: .9em;
         }
+        h2 {
+            font-size: 2em;
+        }
     }
 }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .error {
+        h2 {
+            font-size: 2.4em;
+        }
+    }
+}
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {}

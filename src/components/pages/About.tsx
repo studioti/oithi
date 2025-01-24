@@ -11,7 +11,8 @@ import Description from './about/Description'
 import Knowhow from './about/KnowHow'
 import Worked from './about/Worked'
 
-import scss from '../../scss/components/about.module.scss'
+// import scss from '../../scss/components/about.module.scss'
+import scss from '@/app/scss/components/about.module.scss'
 
 export default function About() {
     return (

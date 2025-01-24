@@ -1,9 +1,11 @@
 'use client'
 
 import { lazy, Suspense, useEffect, useState } from 'react'
-const Site = lazy(() => import('./projects/Site'))
-import scss from '../../scss/components/sites.module.scss'
 
+// import scss from '../../scss/components/sites.module.scss'
+import scss from '@/app/scss/components/sites.module.scss'
+
+const Site = lazy(() => import('./projects/Site'))
 const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
 
 export default function Sites() {

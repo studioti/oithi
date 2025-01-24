@@ -10,8 +10,8 @@ export default function Description({...props}) {
                     <div>
                         <Figure>
                             <Figure.Image
-                                alt='Thiago Aguiar'
-                                src='about/thiago_aguiar.jpg'
+                                alt={'Thiago Aguiar'}
+                                src={'/about/thiago_aguiar.jpg'}
                                 fluid
                                 roundedCircle
                             />

@@ -4,6 +4,9 @@ GLOBALS
 ####################################################	
 */
 
+// tailwind
+@use '../globals.css';
+
 @use '~bootstrap/scss/bootstrap';
 @use 'variables';
 
@@ -25,7 +28,7 @@ body {
 	position: relative;
 	width: 100%;
 	color: variables.$primary;
-	background-color: variables.$black;
+	// background-color: variables.$black;
 	&::before {
 		content: '';
 		width: 130px;
@@ -47,6 +50,7 @@ body {
 		background-color: variables.$secondary;
 		outline: 1px solid transparent;
 	}
+	cursor: none;
 }
 header, 
 footer, 
@@ -65,6 +69,11 @@ h1, h2, h3, h4 {
 	-webkit-font-smooth: always;
 	margin: 0;
 	padding: 0;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: inherit;
+    vertical-align: inherit;
+	max-width: inherit;
 }
 .ratio-16x9,
 .ratio-4x3 {
@@ -159,6 +168,33 @@ h1, h2, h3, h4 {
 		margin: 0 0 0 -65px;
 	}
 }
+.cursor {
+	position: fixed;
+	top: -50px;
+	left: -50px;
+	margin: 0;
+	width: 100px;
+	height: 100px;
+	// background-color: variables.$fifteen;
+	background-color: transparent;
+	border-radius: 50%;
+	pointer-events: none;
+	mix-blend-mode: difference;
+	display: flex;
+	z-index: 10000;
+}
+.f-cursor {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: transparent;
+	background-color: variables.$fifteen;
+	position: fixed;
+	z-index: 10000;
+	left: -2px;
+	top: 15px;
+	display: none;
+}
 
 @media (max-width: 992px) and (orientation: landscape) {
 	/* Styles for portrait orientation */
@@ -233,7 +269,11 @@ h1, h2, h3, h4 {
 }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+	.cursor {
+		background-color: variables.$fifteen;
+	}
+}
 
 // XX-Large devices (larger desktops, 1600px and up)
 @media (min-width: 1440px) {

@@ -1,0 +1,25 @@
+/*
+####################################################
+TEMPLATE - HOME
+####################################################	
+*/
+
+@use '../variables';
+
+.tBox {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    z-index: 1000;
+    span {
+        font-family: var(--font-bebasneue);
+        -webkit-font-smoothing: antialiased;
+        -webkit-font-smooth: always;
+        color: variables.$fifteen;
+        font-size: 40em;
+        font-family: 800;
+        position: relative;
+        z-index: 100;
+    }
+}

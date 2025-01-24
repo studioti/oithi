@@ -3,7 +3,9 @@ import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import SocialMedia from './pages/SocialMedia'
-import scss from '../scss/components/header.module.scss'
+
+// import scss from '../scss/components/header.module.scss'
+import scss from '@/app/scss/components/header.module.scss'
 
 const Video = lazy(() => import('./pages/Video'))
 

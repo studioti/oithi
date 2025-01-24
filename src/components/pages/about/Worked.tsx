@@ -1,12 +1,13 @@
 import Col from 'react-bootstrap/Col'
 import Logo from './Logo'
 import { useEffect, useState } from 'react'
+import { Skeleton } from "@/components/ui/skeleton"
 
 const API_EMPRESAS = `${process.env.NEXT_PUBLIC_API_URL}worked`
 
 export default function Worked({...props}) {
 
-    const [isLoading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [data, setData] = useState([])
     const [empresas, setEmpresas] = useState([])
 
@@ -51,10 +52,21 @@ export default function Worked({...props}) {
                         <h3>Trabalhou em:</h3>
                         <div className={props.scssEnterprise}>
                             {
-                                isLoading && !data &&
-                                <span>Carregando...</span>
-                            }
-                            {
+                                loading && 
+                                <>
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                </>
+                            }{
+                                !loading && data && 
                                 empresas.map( (item, index) => {
                                     return <Logo key={index} path='enterprise' name={item['nome']} size={item['tamanho']} alt={item['descricao']} title={item['descricao']} />
                                 })
