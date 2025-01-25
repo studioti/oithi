@@ -14,10 +14,10 @@ export const transitionPageIn = () => {
 
         eIn.set([box1, box2, box3, box4], {
             yPercent: 0,
-            // stagger: .2
+            stagger: .2
         }).to([box1, box2, box3, box4], {
             yPercent: 100,
-            stagger: .1
+            stagger: .2
         })
     }
 }
@@ -35,10 +35,10 @@ export const transitionPageOut = (href: string, router: AppRouterInstance) => {
 
         eOut.set([box1, box2, box3, box4], {
             yPercent: -100,
-            // stagger: .2
+            stagger: .2
         }).to([box1, box2, box3, box4], {
             yPercent: 0,
-            stagger: .1,
+            stagger: .2,
             onComplete: () => {
                 router.push(href)
             }
