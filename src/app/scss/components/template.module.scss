@@ -1,0 +1,61 @@
+/*
+####################################################
+TEMPLATE - HOME
+####################################################	
+*/
+
+@use '../variables';
+
+.template {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    z-index: 1000;
+    span {
+        font-family: var(--font-bebasneue);
+        -webkit-font-smoothing: antialiased;
+        -webkit-font-smooth: always;
+        color: variables.$fifteen;
+        font-size: 10em;
+        font-family: 800;
+        position: relative;
+        z-index: 100;
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .template {
+        span {
+            font-size: 30em;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .template {
+        span {
+            font-size: 40em;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    .template {
+        span {
+            font-size: 45em;
+        }
+    }
+}

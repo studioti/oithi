@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
-import TransitionURL from '@/components/utils/TransitionURL'
+// import TransitionURL from '@/components/utils/TransitionURL'
 
 export default function Site({...props}) {
     // props somente leitura
@@ -22,7 +22,7 @@ export default function Site({...props}) {
                     <span>0{props.scssPos}</span>
                 </div>
                 <div className={props.scssPrint}></div>
-                <TransitionURL href={'cases'} label={'link para cases'} />
+                {/* <TransitionURL href={'cases'} label={'link para cases'} /> */}
             </div>
         </>
     )
