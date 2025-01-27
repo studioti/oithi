@@ -2,8 +2,7 @@
 
 import { lazy, Suspense, useEffect, useState } from 'react'
 
-// import scss from '../../scss/components/sites.module.scss'
-import scss from '@/app/scss/components/sites.module.scss'
+import scss from '@/app/scss/components/cases/sites.module.scss'
 
 const Site = lazy(() => import('./projects/Site'))
 const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
@@ -59,7 +58,7 @@ export default function Sites() {
                         const size = sites.length
                         return (
                             <section className={`${scss.sites} ${scss[item['nome']]} ${size}`} key={index}>
-                                <Site scssName='sites' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
+                                <Site slug={item['nome']} titulo={item['titulo']} scssName='sites' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
                             </section>
                         )
                     })

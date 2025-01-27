@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import { Col, Container, OverlayTrigger, Row, Tooltip } from 'react-bootstrap'
 import { Metadata } from 'next'
-
-// import scss from "../scss/error.module.scss"
+import TransitionURL from '@/components/utils/TransitionURL'
 import scss from '@/app/scss/error.module.scss'
 
 export const metadata: Metadata = {
@@ -14,7 +12,9 @@ export default async function NotFound() {
 		<>
 			<section className={scss.error}>
 				<OverlayTrigger overlay={<Tooltip>Acessar a página inicial</Tooltip>} placement="right">
-					<Link href={'/'} className={'seta_navegacao error'} aria-label="Acessar a página inicial"></Link>
+					<span className={'seta_navegacao error'} aria-label="Acessar a página inicial">
+						<TransitionURL href={'/'} label={''} />
+					</span>
 				</OverlayTrigger>
 				<Container fluid className={scss.content}>
 					<Row className='justify-content-center'>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline } from 'next/font/google'
+import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline, Poppins } from 'next/font/google'
 
 import '@/app/scss/globals.scss'
 import scss from "@/app/scss/index.module.scss"
@@ -10,7 +10,7 @@ const bebasneue = Bebas_Neue({
     display: 'swap',
     weight: "400",
     variable: '--font-bebasneue',
-    preload: false
+    preload: true
 })
 
 const msmadi = Ms_Madi({
@@ -18,7 +18,7 @@ const msmadi = Ms_Madi({
     display: 'swap',
     weight: "400",
     variable: '--font-msmadi',
-    preload: false
+    preload: true
 })
 
 const poiretone = Poiret_One({
@@ -26,7 +26,7 @@ const poiretone = Poiret_One({
     display: 'swap',
     weight: "400",
     variable: '--font-poiretone',
-    preload: false
+    preload: true
 })
 
 const bungeeinline = Bungee_Inline({
@@ -34,7 +34,15 @@ const bungeeinline = Bungee_Inline({
     display: 'swap',
     weight: "400",
     variable: '--font-bungeeinline',
-    preload: false
+    preload: true
+})
+
+const poppins = Poppins({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400",
+    variable: '--font-roboto',
+    preload: true
 })
 
 export const metadata: Metadata = {
@@ -169,7 +177,7 @@ export const metadata: Metadata = {
  
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable}`}>
+        <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable} ${poppins.variable}`}>
             <body className={scss.index}>
                 <Cursor />
                 {children}

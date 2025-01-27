@@ -1,9 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import TransitionURL from '@/components/utils/TransitionURL'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
-// import TransitionURL from '@/components/utils/TransitionURL'
 
 export default function Site({...props}) {
     // props somente leitura
@@ -21,8 +21,10 @@ export default function Site({...props}) {
                 <div className={props.scssBoxPosition}>
                     <span>0{props.scssPos}</span>
                 </div>
+                <h2>
+                    <TransitionURL href={`cases/${props.slug}`} label={`${props.titulo}`} />
+                </h2>
                 <div className={props.scssPrint}></div>
-                {/* <TransitionURL href={'cases'} label={'link para cases'} /> */}
             </div>
         </>
     )

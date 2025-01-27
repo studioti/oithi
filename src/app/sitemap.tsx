@@ -9,10 +9,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const result = data.cases
     const sites:any = Object.values(result)
 
-    const cases: MetadataRoute.Sitemap = sites.map( (item:any, index:any) => {
-        index += 1
+    const cases: MetadataRoute.Sitemap = sites.map( (item:any) => {
+        // index += 1
         return {
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}cases/${index}`,
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}cases/${item['nome']}`,
             images: [`${process.env.NEXT_PUBLIC_BASE_URL}sites/bg-${item['nome']}.jpg`],
             lastModified: new Date(),
             priority: .9,

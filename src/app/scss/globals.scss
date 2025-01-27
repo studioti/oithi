@@ -28,7 +28,7 @@ body {
 	position: relative;
 	width: 100%;
 	color: variables.$primary;
-	// background-color: variables.$black;
+	background-color: variables.$seventeen;
 	&::before {
 		content: '';
 		width: 130px;
@@ -142,6 +142,16 @@ img, svg, video, canvas, audio, iframe, embed, object {
 			height: 80px;
 		}
 	}
+	button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		appearance: none;
+		background-color: none;
+	}
 }
 .socialmedia {
 	position: absolute;
@@ -194,6 +204,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
 	left: -2px;
 	top: 15px;
 	display: none;
+}
+#scroll-indicator {
+	z-index: 100000;
 }
 
 @media (max-width: 992px) and (orientation: landscape) {

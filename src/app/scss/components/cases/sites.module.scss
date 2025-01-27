@@ -4,7 +4,7 @@ SITES
 ####################################################	
 */
 
-@use '../variables';
+@use '../../variables';
 
 .sites {
     width: 100%;
@@ -20,12 +20,26 @@ SITES
     z-index: 999;
     h2 {
         font-size: 6.4em;
-        line-height: .9em;
+        line-height: .95em;
         font-weight: 500;
-        color: variables.$third;
+        letter-spacing: -0.02em;
+        color: variables.$patternColor1;
         position: relative;
-        z-index: 100;
-        padding-top: .15em;
+        z-index: 1000;
+        max-width: 800px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            max-width: 800px;
+            height: 70px;
+            margin: 0 0 0 -50%;
+            // border: 1px dotted green;
+            bottom: -40px;
+            left: 50%;
+            background: url('/underline.png') center no-repeat;
+            background-size: 100%;
+        }
     }
     .box {
         position: absolute;
@@ -34,10 +48,10 @@ SITES
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: self-start;
-        align-self: self-start;
-        justify-content: space-between;
-        backdrop-filter: blur(.3em);
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        backdrop-filter: blur(.4em);
         &::before {
             content: '';
             position: absolute;
@@ -167,7 +181,13 @@ SITES
 @media (min-width: 576px) {}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .sites {
+        h2 {
+            font-size: 9em;
+        }
+    }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {}

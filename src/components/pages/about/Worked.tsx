@@ -1,7 +1,7 @@
 import Col from 'react-bootstrap/Col'
 import Logo from './Logo'
 import { useEffect, useState } from 'react'
-import { Skeleton } from "@/components/ui/skeleton"
+import SkeletonUIWorked from '@/components/utils/skeleton/Worked'
 
 const API_EMPRESAS = `${process.env.NEXT_PUBLIC_API_URL}worked`
 
@@ -35,8 +35,9 @@ export default function Worked({...props}) {
             console.log(error)
 
         } finally {
-            setLoading(false)
-
+            setTimeout(() => {
+                setLoading(false)
+            }, 3000)
         }
     }
 
@@ -54,16 +55,7 @@ export default function Worked({...props}) {
                             {
                                 loading && 
                                 <>
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
-                                    <Skeleton className="h-[100px] w-[100px] rounded-full m-2" />
+                                    <SkeletonUIWorked />
                                 </>
                             }{
                                 !loading && data && 
