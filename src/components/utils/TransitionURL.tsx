@@ -15,7 +15,7 @@ const TransitionURL = ({href, label}: Props) => {
 
     const handleClick = (e:any) => {
         try {
-            e.preventDefault()
+            // e.preventDefault()
             e.target.disabled = true
             if(pathname != href) {
                 transitionPageOut(href, router)

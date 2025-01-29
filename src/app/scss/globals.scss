@@ -75,6 +75,13 @@ img, svg, video, canvas, audio, iframe, embed, object {
     vertical-align: inherit;
 	max-width: inherit;
 }
+b, strong {
+	font-weight: 700;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
 .ratio-16x9,
 .ratio-4x3 {
 	min-width: 100%;
@@ -100,6 +107,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 	z-index: 1000;
 	display: none;
 	&.top,
+	&.page,
 	&.error {
 		top: 0;
 		background: url('/bg-seta-top.png') 0 -30px no-repeat;
@@ -134,7 +142,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 			background-size: 100% auto;
 		}
 	}
-	&.error {
+	&.error,
+	&.page {
 		display: block;
 		&::after {
 			margin: 0 0 0 -40px;
@@ -151,6 +160,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
 		z-index: 100;
 		appearance: none;
 		background-color: none;
+	}
+}
+#cases {
+	.seta_navegacao {
+		display: block;
 	}
 }
 .socialmedia {
@@ -240,6 +254,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 @media (min-width: 768px) {
 	.seta_navegacao {
 		&.error,
+		&.page,
 		&.top,
 		&.bottom {
 			&::after {

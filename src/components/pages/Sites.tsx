@@ -1,7 +1,6 @@
 'use client'
 
 import { lazy, Suspense, useEffect, useState } from 'react'
-
 import scss from '@/app/scss/components/cases/sites.module.scss'
 
 const Site = lazy(() => import('./projects/Site'))
