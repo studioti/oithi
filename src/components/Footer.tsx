@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, memo, Suspense } from 'react'
 import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
@@ -8,12 +8,11 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-// import scss from '../scss/components/footer.module.scss'
 import scss from '@/app/scss/components/footer.module.scss'
 
 const Video = lazy(() => import('./pages/Video'))
 
-export default function Footer() {
+const Footer = () => {
     return (
         <footer className={scss.footer} id='footer'>
 
@@ -71,3 +70,5 @@ export default function Footer() {
         </footer>
     )
 }
+
+export default memo(Footer)

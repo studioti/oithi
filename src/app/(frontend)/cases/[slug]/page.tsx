@@ -5,12 +5,12 @@ import { Col, Container, Figure, OverlayTrigger, Row, Tooltip } from "react-boot
 import { useParams } from 'next/navigation'
 import scss from '@/app/scss/components/cases/index.module.scss'
 import Link from "next/link";
-import { Suspense, useEffect, useState } from "react"
+import { memo, Suspense, useEffect, useState } from "react"
 import NotFound from "@/app/not-found"
 
 const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
 
-export default function Cases() {
+const Cases = () => {
 
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState([])
@@ -32,13 +32,10 @@ export default function Cases() {
             setData(data)
 
             const result = data.cases
-            const filterCase = result.filter((name: { nome: string }) => name.nome == slug)
-            const cases:any = Object.values(filterCase)
-
-            // console.log('filtro:', filterCase.length)
+            const cfilter = result.filter((name: { nome: string }) => name.nome == slug)
+            const cases:any = Object.values(cfilter)
 
             setCases(cases)
-            // console.log('retorno:', cases)
 
         } catch (error) {
             console.log(error)
@@ -46,14 +43,13 @@ export default function Cases() {
 
         } finally {
             setLoading(false)
-            
         }
     }
 
     useEffect( () => {
-        getCase() 
+        getCase()
     }, [])
-    
+
     return (
         <>
             <section className={`${scss.case}`} id="cases">
@@ -135,3 +131,5 @@ export default function Cases() {
         </>
     )
 }
+
+export default memo(Cases)

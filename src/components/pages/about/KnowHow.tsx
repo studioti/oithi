@@ -1,9 +1,10 @@
 'use client'
 
+import { memo } from 'react'
 import Col from 'react-bootstrap/Col'
 import Figure from 'react-bootstrap/Figure'
 
-export default function Knowhow({...props}) {
+const Knowhow = ({...props}) => {
     // props somente leitura
     return (
         <>
@@ -31,3 +32,5 @@ export default function Knowhow({...props}) {
         </>
     )
 }
+
+export default memo(Knowhow)

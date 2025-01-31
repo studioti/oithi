@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import Figure from 'react-bootstrap/Figure'
 
-export default function Logo({...props}) {
+const Logo = ({...props}) => {
     // props somente leitura
     return (
         <>
@@ -15,3 +16,5 @@ export default function Logo({...props}) {
         </>
     )
 }
+
+export default memo(Logo)

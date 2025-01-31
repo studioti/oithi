@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { memo, useEffect, useLayoutEffect, useRef } from 'react'
 import gsap  from 'gsap'
 
-export default function Cursor() {
+const Cursor = () => {
 
     const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
@@ -61,3 +61,5 @@ export default function Cursor() {
         </>
     )
 }
+
+export default memo(Cursor)

@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import Col from 'react-bootstrap/Col'
 import Figure from 'react-bootstrap/Figure'
 
-export default function Description({...props}) {
+const Description = ({...props}) => {
     // props somente leitura
     return (
         <>
@@ -25,3 +26,5 @@ export default function Description({...props}) {
         </>
     )
 }
+
+export default memo(Description)

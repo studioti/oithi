@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, memo, Suspense } from 'react'
 import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
@@ -8,7 +8,7 @@ import scss from '@/app/scss/components/projects.module.scss'
 
 const Video = lazy(() => import('./Video'))
 
-export default function Projects() {
+const Projects = () => {
     return (
         <>
             <section className={scss.projects} id='projects'>
@@ -33,3 +33,5 @@ export default function Projects() {
         </>
     )
 }
+
+export default memo(Projects)

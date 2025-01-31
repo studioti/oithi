@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import Ratio from 'react-bootstrap/Ratio'
 
-export default function Video({...props}) {
+const Video = ({...props}) => {
     // props somente leitura
     return (
         <>
@@ -13,3 +14,5 @@ export default function Video({...props}) {
         </>
     )
 }
+
+export default memo(Video)

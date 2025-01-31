@@ -4,8 +4,9 @@ import Link from 'next/link'
 import TransitionURL from '@/components/utils/TransitionURL'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
+import { memo } from 'react'
 
-export default function Site({...props}) {
+const Site = ({...props}) => {
     // props somente leitura
     return (
         <>
@@ -29,3 +30,5 @@ export default function Site({...props}) {
         </>
     )
 }
+
+export default memo(Site)

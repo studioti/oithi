@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, memo, Suspense } from 'react'
 import Link from 'next/link'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
@@ -9,7 +9,7 @@ import scss from '@/app/scss/components/header.module.scss'
 
 const Video = lazy(() => import('./pages/Video'))
 
-export default function Header() {
+const Header = () => {
     return (
         <header className={scss.header} id='header'>
 
@@ -37,3 +37,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default memo(Header)

@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import { memo } from 'react'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 
-export default function SocialMedia({...props}) {
+const SocialMedia = ({...props}) => {
     // props somente leitura
     return (
         <>
@@ -21,3 +22,5 @@ export default function SocialMedia({...props}) {
         </>
     )
 }
+
+export default memo(SocialMedia)

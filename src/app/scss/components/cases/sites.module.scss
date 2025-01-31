@@ -72,6 +72,7 @@ SITES
         height: 100%;
         // font-family: "Bungee Inline", Arial, Helvetica, sans-serif;
         font-family: var(--font-bungeeinline);
+        letter-spacing: -.9em;
         display: flex;
         align-items: center;
         align-self: center;
@@ -122,6 +123,15 @@ SITES
         background-size: cover;
         .print {
             background: url('/sites/bg-parceleaqui-print.jpg') top center no-repeat;
+            background-size: 320px auto;
+        }
+    }
+    &.msadecoracao {
+        color: variables.$nineteen;
+        background: url('/sites/bg-msadecoracao.jpg') top center no-repeat;
+        background-size: cover;
+        .print {
+            background: url('/sites/bg-msadecoracao-print.jpg') top center no-repeat;
             background-size: 320px auto;
         }
     }

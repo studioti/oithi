@@ -1,9 +1,9 @@
-import { lazy, Suspense } from 'react'
+import { lazy, memo, Suspense } from 'react'
 
 const Header = lazy(() => import('./Header'))
 const Footer = lazy(() => import('./Footer'))
 
-export default function Layout({...props}){
+const Layout = ({...props}) => {
     return (
         <>
             {/* header */}
@@ -21,3 +21,5 @@ export default function Layout({...props}){
         </>
     )
 }
+
+export default memo(Layout)

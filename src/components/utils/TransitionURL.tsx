@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation"
 import { transitionPageOut } from "./TransitionPage"
 import NotFound from "@/app/not-found"
+import { memo } from "react"
 
 interface Props {
     href: string,
@@ -34,4 +35,4 @@ const TransitionURL = ({href, label}: Props) => {
     )
 }
 
-export default TransitionURL
+export default memo(TransitionURL)

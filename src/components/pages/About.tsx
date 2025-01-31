@@ -11,10 +11,10 @@ import Description from './about/Description'
 import Knowhow from './about/KnowHow'
 import Worked from './about/Worked'
 
-// import scss from '../../scss/components/about.module.scss'
 import scss from '@/app/scss/components/about.module.scss'
+import { memo } from 'react'
 
-export default function About() {
+const About = () => {
     return (
         <>
             <section className={scss.about} id='about'>
@@ -51,3 +51,5 @@ export default function About() {
         </>
     )
 }
+
+export default memo(About)

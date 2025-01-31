@@ -1,11 +1,11 @@
 import Col from 'react-bootstrap/Col'
 import Logo from './Logo'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import SkeletonUIWorked from '@/components/utils/skeleton/Worked'
 
 const API_EMPRESAS = `${process.env.NEXT_PUBLIC_API_URL}worked`
 
-export default function Worked({...props}) {
+const Worked = ({...props}) => {
 
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState([])
@@ -70,3 +70,5 @@ export default function Worked({...props}) {
         </>
     )
 }
+
+export default memo(Worked)

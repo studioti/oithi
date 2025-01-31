@@ -1,4 +1,5 @@
 import { Skeleton } from "@/components/ui/skeleton"
+import { memo } from "react"
 
 const SkeletonUIWorked = () => {
     return (
@@ -20,4 +21,4 @@ const SkeletonUIWorked = () => {
     )
 }
 
-export default SkeletonUIWorked
+export default memo(SkeletonUIWorked)

@@ -1,12 +1,12 @@
 'use client'
 
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, memo, Suspense, useEffect, useState } from 'react'
 import scss from '@/app/scss/components/cases/sites.module.scss'
 
 const Site = lazy(() => import('./projects/Site'))
 const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
 
-export default function Sites() {
+const Sites = () => {
 
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState([])
@@ -66,3 +66,5 @@ export default function Sites() {
         </>
     )
 }
+
+export default memo(Sites)
