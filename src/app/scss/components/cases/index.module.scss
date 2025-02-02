@@ -6,9 +6,38 @@ SITES
 
 @use '../../variables';
 
+body:has(.empty) {
+    .case {
+        .titulo {
+            height: auto;
+            div {
+                height: auto;
+            }
+        }
+        h1 {
+            font-size: 6em;
+            line-height: 1em;
+        }
+        .slug {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            -webkit-box-orient: block-axis;
+            // font-style: italic; 
+            font-size: .6em;
+        }
+        span {
+            display: block;
+        }
+    }
+    .pagination {
+        display: none;
+    }
+}
+
 .case {
     max-width: 1920px;
-    min-height: 1200px;
+    min-height: 101dvh;
     position: relative;
     &::before {
         content: none;
@@ -54,6 +83,20 @@ SITES
         padding: 150px calc(var(--bs-gutter-x)* 0.5);
         z-index: 999;
         position: relative;
+        min-height: 100dvh;
+        &.empty {
+            display: flex;
+            align-items: center;
+            align-self: center;
+            justify-content: center;
+            h1 {
+                position: relative;
+                top: inherit;
+                left: inherit;
+                text-align: center;
+                color: variables.$black;
+            }
+        }
     }
     .titulo {
         align-items: center;
@@ -147,6 +190,7 @@ SITES
         align-self: center;
         justify-content: space-around;
         z-index: 1000;
+        display: none;
         span {
             font-weight: 600;
             font-size: 1.4em;
@@ -174,6 +218,14 @@ SITES
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+    body:has(.empty) {
+        .case {
+            h1 {
+                font-size: 10em;
+                line-height: 1em;
+            }
+        }
+    }
     .case {
         .titulo {
             height: 300px;

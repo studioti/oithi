@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from "next/navigation"
 import { transitionPageOut } from "./TransitionPage"
-import NotFound from "@/app/not-found"
 import { memo } from "react"
 
 interface Props {
@@ -24,7 +23,6 @@ const TransitionURL = ({href, label}: Props) => {
 
         } catch (error) {
             console.log(error)
-            NotFound()
         }
     }
 

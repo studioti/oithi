@@ -1,6 +1,8 @@
-import NotFound from "@/app/not-found"
+'use client'
+
 import gsap from "gsap"
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime"
+import error from "next/error"
 
 export const transitionPageIn = (href:string) => {
 
@@ -24,17 +26,20 @@ export const transitionPageIn = (href:string) => {
             eIn
             .set([box1, box2, box3, box4], {
                 yPercent: 0,
-                stagger: .2
+                stagger: {
+                    amount: .5
+                }
             })
             .to([box1, box2, box3, box4], {
                 yPercent: 100,
-                stagger: .2
+                stagger: {
+                    amount: .5
+                }
             })
         }
 
     } catch (error) {
         console.log(error)
-        NotFound()
     }
     
 }
@@ -46,20 +51,35 @@ export const transitionPageOut = (href: string, router: AppRouterInstance) => {
     const box3 = document.getElementById('box-3')
     const box4 = document.getElementById('box-4')
 
+    const route = href
+    const pathURL = route.split('/')
+
     try {
         if(box1 && box2 && box3 && box4) {
 
-            if(href && href == '/') {
+            if(href === '/') {
                 box1.innerHTML = '<span>2</span>'
                 box2.innerHTML = '<span>0</span>'
                 box3.innerHTML = '<span>2</span>'
                 box4.innerHTML = '<span>5</span>'
-
-            } else {
+            }
+            else if(pathURL[0] === 'cases' || pathURL[1] === 'cases') {
                 box1.innerHTML = '<span>C</span>'
                 box2.innerHTML = '<span>A</span>'
                 box3.innerHTML = '<span>S</span>'
                 box4.innerHTML = '<span>E</span>'
+            }
+            else if(pathURL[0] === 'lgpd') {
+                box1.innerHTML = '<span>L</span>'
+                box2.innerHTML = '<span>G</span>'
+                box3.innerHTML = '<span>P</span>'
+                box4.innerHTML = '<span>D</span>'
+            }
+            else if(error) {
+                box1.innerHTML = '<span>O</span>'
+                box2.innerHTML = '<span>P</span>'
+                box3.innerHTML = '<span>S</span>'
+                box4.innerHTML = '<span>!</span>'
             }
 
             const eOut = gsap.timeline()
@@ -67,11 +87,15 @@ export const transitionPageOut = (href: string, router: AppRouterInstance) => {
             eOut
             .set([box1, box2, box3, box4], {
                 yPercent: -100,
-                stagger: .2
+                stagger: {
+                    amount: .5
+                }
             })
             .to([box1, box2, box3, box4], {
                 yPercent: 0,
-                stagger: .2,
+                stagger: {
+                    amount: .5
+                },
                 onComplete: () => {
                     router.push(href)
                 }
@@ -79,6 +103,5 @@ export const transitionPageOut = (href: string, router: AppRouterInstance) => {
         }
     } catch (error) {
         console.log(error)
-        NotFound()
     }
 }

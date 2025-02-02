@@ -4,6 +4,7 @@ import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline, Poppins } from 'next/fo
 import '@/app/scss/globals.scss'
 import scss from "@/app/scss/index.module.scss"
 import Cursor from "@/components/utils/Cursor"
+import { memo } from "react"
 
 const bebasneue = Bebas_Neue({
     subsets: ['latin'],
@@ -175,7 +176,7 @@ export const metadata: Metadata = {
     manifest: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/manifest.json`
 }
  
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable} ${poppins.variable}`}>
             <body className={scss.index}>
@@ -185,3 +186,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </html>
     )
 }
+
+export default memo(RootLayout)

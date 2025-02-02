@@ -51,7 +51,7 @@ SITES
         align-items: center;
         align-self: center;
         justify-content: center;
-        backdrop-filter: blur(.4em);
+        backdrop-filter: blur(.3em);
         &::before {
             content: '';
             position: absolute;
@@ -59,8 +59,8 @@ SITES
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: variables.$black;
-            opacity: .2;
+            background-color: variables.$secondary;
+            opacity: .3;
             z-index: 1;
         }
     }
@@ -68,7 +68,7 @@ SITES
         position: absolute;
         top: 0;
         width: 100%;
-        max-width: 550px;
+        max-width: 400px;
         height: 100%;
         // font-family: "Bungee Inline", Arial, Helvetica, sans-serif;
         font-family: var(--font-bungeeinline);
@@ -82,6 +82,7 @@ SITES
             display: block;
             font-size: 22em;
             transform: rotate(-90deg);
+            display: none;
         }
     }
     .print {
@@ -91,6 +92,7 @@ SITES
         max-width: 450px;
         height: 100%;
         z-index: 1;
+        display: none;
     }
     .left {
         .position {
@@ -197,22 +199,31 @@ SITES
         h2 {
             font-size: 9em;
         }
+        .position {
+            span {
+                display: block;
+            }
+        }
+        .print {
+            display: block;
+        }
     }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .sites {
         .position {
+            max-width: 550px;
             span {
                 font-size: 35em;
             }
         }
     }
 }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {}

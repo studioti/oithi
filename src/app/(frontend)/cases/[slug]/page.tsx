@@ -6,7 +6,11 @@ import { useParams } from 'next/navigation'
 import scss from '@/app/scss/components/cases/index.module.scss'
 import Link from "next/link";
 import { memo, Suspense, useEffect, useState } from "react"
-import NotFound from "@/app/not-found"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: 'Cases • Thiago Aguiar • Front-end Developer'
+}
 
 const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
 
@@ -39,7 +43,6 @@ const Cases = () => {
 
         } catch (error) {
             console.log(error)
-            NotFound()
 
         } finally {
             setLoading(false)
@@ -116,6 +119,20 @@ const Cases = () => {
                                 </div>
                             )
                         })
+                    }
+                    {
+                        cases.length == 0 && data &&
+                        <Container className={`${scss.container} ${scss.empty}`}>
+                            <Row className={`${scss.titulo}`}>
+                                <Col>
+                                    <h1>
+                                        <span>Case</span>
+                                        <span className={`${scss.slug}`}>"{slug}"</span>
+                                        <span>não existe</span>
+                                    </h1>                                    
+                                </Col>
+                            </Row>
+                        </Container>
                     }
                 </Suspense>
 

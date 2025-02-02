@@ -2,12 +2,13 @@ import { Col, Container, OverlayTrigger, Row, Tooltip } from 'react-bootstrap'
 import { Metadata } from 'next'
 import TransitionURL from '@/components/utils/TransitionURL'
 import scss from '@/app/scss/error.module.scss'
+import { memo } from 'react'
 
 export const metadata: Metadata = {
     title: 'Página não encontrada • Thiago Aguiar • Front-end Developer'
 }
 
-export default async function NotFound() {
+const NotFound = () => {
 	return (
 		<>
 			<section className={scss.error}>
@@ -28,3 +29,5 @@ export default async function NotFound() {
 		</>
 	)
 }
+
+export default memo(NotFound)

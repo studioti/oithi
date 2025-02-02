@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  sassOptions: {
+	/* config options here */
+	reactStrictMode: false,
+	sassOptions: {
 		implementation: 'sass-embedded',
 		silenceDeprecations: ['modern-js-api'],
 	},
