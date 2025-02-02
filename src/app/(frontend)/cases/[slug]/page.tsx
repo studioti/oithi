@@ -6,11 +6,6 @@ import { useParams } from 'next/navigation'
 import scss from '@/app/scss/components/cases/index.module.scss'
 import Link from "next/link";
 import { memo, Suspense, useEffect, useState } from "react"
-import { Metadata } from "next"
-
-export const metadata: Metadata = {
-    title: 'Cases • Thiago Aguiar • Front-end Developer'
-}
 
 const API_CASES = `${process.env.NEXT_PUBLIC_API_URL}sites`
 
