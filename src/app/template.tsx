@@ -24,7 +24,7 @@ const Template = ({children}: {children: React.ReactNode}) => {
                 {
                     router === '/'
                     ? <span>2</span>
-                    : router === '/lgpd'
+                    : pathURL[1] === 'lgpd'
                     ? <span>L</span>
                     : pathURL[1] === 'cases'
                     ? <span>C</span>
@@ -37,7 +37,7 @@ const Template = ({children}: {children: React.ReactNode}) => {
                 {
                     router === '/'
                     ? <span>0</span>
-                    : router === '/lgpd'
+                    : pathURL[1] === 'lgpd'
                     ? <span>G</span>
                     : pathURL[1] === 'cases'
                     ? <span>A</span>
@@ -50,7 +50,7 @@ const Template = ({children}: {children: React.ReactNode}) => {
                 {
                     router === '/'
                     ? <span>2</span>
-                    : router === '/lgpd'
+                    : pathURL[1] === 'lgpd'
                     ? <span>P</span>
                     : pathURL[1] === 'cases'
                     ? <span>S</span>
@@ -63,7 +63,7 @@ const Template = ({children}: {children: React.ReactNode}) => {
                 {
                     router === '/'
                     ? <span>5</span>
-                    : router === '/lgpd'
+                    : pathURL[1] === 'lgpd'
                     ? <span>D</span>
                     : pathURL[1] === 'cases'
                     ? <span>E</span>

@@ -1,0 +1,111 @@
+/*
+####################################################
+LGPD
+####################################################	
+*/
+
+@use '../../variables';
+
+.lgpd {
+    max-width: 1920px;
+    min-height: 101dvh;
+    position: relative;
+    &::after {
+		content: '';
+		width: 1px;
+		height: 130px;
+		background-color: variables.$fifteen;
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		margin: 0 0 0 -1;
+		z-index: 50;
+	}
+    .seta_navegacao {
+        top: 0;
+		background: url('/bg-seta-top.png') 0 -30px no-repeat;
+		background-size: 100% auto;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin: 0 0 0 -25px;
+			width: 50px;
+			height: 50px;
+			background: url('/seta-cima.svg') center no-repeat;
+			background-size: 100% auto;
+		}
+    }
+    .container {
+        max-width: 1440px;
+        padding: 150px calc(var(--bs-gutter-x)* 0.5);
+        z-index: 999;
+        position: relative;
+        min-height: 100dvh;
+    }
+    h1 {
+        font-size: 6em;
+        letter-spacing: -0.02em;
+        line-height: .9em;
+        margin-bottom: 30px;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.25em;
+        line-height: 1.3em;
+        font-weight: 500;
+    }
+    li {
+        font-size: 1.25em;
+    }
+    .number {
+        position: fixed;
+        top: 80%;
+        right: -180px;
+        transform: rotate(270deg);
+        width: 500px;
+        // border: 1px dotted purple;
+        span {
+            font-size: 20em;
+            letter-spacing: -.03em;
+            line-height: normal;
+            font-family: var(--font-bungeeinline);
+            color: variables.$thirteenth;
+            position: relative;
+            display: block;
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .lgpd {
+        h1 {
+            font-size: 6.4em;
+        }
+        .number {
+            right: 0;
+            span {
+                font-size: 35em;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

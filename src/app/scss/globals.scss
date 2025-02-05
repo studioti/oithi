@@ -82,6 +82,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+ul, li {
+	font-size: inherit;
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 .ratio-16x9,
 .ratio-4x3 {
 	min-width: 100%;
