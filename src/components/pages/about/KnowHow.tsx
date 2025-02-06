@@ -20,11 +20,12 @@ const Knowhow = ({...props}) => {
                         </Figure>
                         <h3>Know-How</h3>
                         <ul>
-                            <li>Vue JS | Nuxt JS, React JS | Next JS, E+</li>
-                            <li>Bootstrap, Sass, Mobile First, PWA E+</li>
-                            <li>Git, Git Flow, Conventional Commit, E+</li>
-                            <li>Metodologias Ágeis, Scrum, Kanbam, E+</li>
-                            <li>JIRA, #Slack, Trello, Clockify, E+</li>
+                            <li><strong>Frontend:</strong> Vue.js (2 e 3) (Nuxt.js), React.js (Next.js), JavaScript (ES6+), TypeScript, HTML5, CSS3 (SASS, LESS), BootstrapVue, React Bootstrap.</li>
+                            <li><strong>Performance & SEO:</strong> Técnicas de otimização, código modular e escalável.</li>
+                            {/* <li><strong>Integrações e APIs:</strong> REST, GraphQL, consumo eficiente de APIs</li> */}
+                            <li><strong>Versionamento & DevOps:</strong> Git, Git Flow, Conventional Commits, Docker.</li>
+                            <li><strong>Design & UX:</strong> Figma, Adobe XD, Mobile First, UI Responsiva e acessível, WAI-ARIA, WCAG 2.1.</li>
+                            <li><strong>Metodologias:</strong> Scrum, Kanban, CI/CD, Clean Code, TDD.</li>
                         </ul>
                     </div>
                 </div>

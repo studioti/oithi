@@ -31,12 +31,13 @@ ABOUT
         list-style-type: none;
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-justify: inherit;
+        text-align: left;
     }
     li {
         display: block;
         margin: 0 auto;
-        padding: 0 0 .7em 0;
+        padding: 0 0 .4em 0;
     }
     h3 {
         // font-family: "MS Madi", Arial, Helvetica, sans-serif;
@@ -153,7 +154,8 @@ ABOUT
             font-size: 3.4em;
         }
         .content {
-            .description {
+            .description,
+            .knowhow {
                 padding-left: 50px;
                 padding-right: 50px;
             }
@@ -186,6 +188,18 @@ ABOUT
                 align-items: center;
                 align-self: center;
                 justify-content: center;
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1600px) {
+    .about {
+        .content {
+            .knowhow {
+                padding-left: 80px;
+                padding-right: 80px;
             }
         }
     }

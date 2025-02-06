@@ -18,8 +18,8 @@ const Description = ({...props}) => {
                             />
                         </Figure>                                    
                         <h3>Thiago Aguiar</h3>
-                        <p>Thiago é um especialista em tecnologia com 15 anos de experiência em desenvolvimento front-end. Formado em Análise e Desenvolvimento de Sistemas pela FIAP, construiu sua carreira em agências de marketing digital e grandes grupos de mídia em São Paulo.</p>
-                        <p className='mb-0'>Com sólida experiência, criou sites, landing pages, interfaces web para sistemas e portais de notícias, além de realizar integrações com APIs e manutenção contínua de projetos. Também atua como freelancer, entregando soluções para clientes e negócios.</p>
+                        <p>Profissional com +10 anos de experiência em desenvolvimento web, especializado em Vue.js, React.js e tecnologias frontend modernas. Expertise na criação de interfaces responsivas, intuitivas e performáticas para empresas e projetos de impacto.</p>
+                        <p className='mb-0'>Com sólida experiência, criou sites, landing pages, interfaces web para sistemas e portais de notícias, além de integrações com APIs e CI/CD. Também atua como freelancer, entregando soluções para clientes e negócios.</p>
                     </div>
                 </div>
             </Col>

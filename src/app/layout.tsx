@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Bebas_Neue, Ms_Madi, Poiret_One, Bungee_Inline, Poppins } from 'next/font/google'
 
 import '@/app/scss/globals.scss'
@@ -6,6 +6,11 @@ import scss from "@/app/scss/index.module.scss"
 import Cursor from "@/components/utils/Cursor"
 import { memo } from "react"
 import Script from "next/script"
+
+export const viewport: Viewport = {
+    themeColor: 'black',
+    userScalable: false
+}
 
 const bebasneue = Bebas_Neue({
     subsets: ['latin'],
@@ -172,7 +177,7 @@ export const metadata: Metadata = {
         "msapplication-TileColor": "#000000",
         "msapplication-TileImage": "favicon/ms-icon-144x144.png",
         themeColor: '#000000',
-        "google-site-verification": 'SUkDocJKfLYqumrzO8cT6dt0AbujY0AECuh0gdmPZHU'
+        "google-site-verification": 'SUkDocJKfLYqumrzO8cT6dt0AbujY0AECuh0gdmPZHU',
     },
     manifest: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/manifest.json`
 }
@@ -183,15 +188,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable} ${poppins.variable}`}>
             <head>
-                <Script
-                    id={`Cookiebot`}
-                    async={true}
-                    src={`https://consent.cookiebot.com/uc.js`}
-                    strategy={`afterInteractive`}
-                    data-cbid={domainGroupId}
-                    data-blockingmode={`auto`}
-                    type={`text/javascript`}
-                />
+                {
+                    process.env.NODE_ENV === 'production' && 
+                    <Script
+                        id={`Cookiebot`}
+                        async={true}
+                        src={`https://consent.cookiebot.com/uc.js`}
+                        strategy={`afterInteractive`}
+                        data-cbid={domainGroupId}
+                        data-blockingmode={`auto`}
+                        type={`text/javascript`}
+                    />
+                }
             </head>
             <body className={scss.index}>
                 <Cursor />
