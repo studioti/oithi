@@ -47,7 +47,7 @@ const Footer = () => {
                             </Col>
                             <Col xs={12} className={scss.cta}>
                                 <div className={scss.box}>
-                                    <Link href='https://wa.me/5511952718004?text=Olá,%20Thiago!%20Tudo%20bem?%20Tenho%20interesse%20em%20te%20contratar!%20Você%20teria%20disponibilidade?' aria-label="Abre em uma nova guia">
+                                    <Link href='https://wa.me/5511952718004' aria-label="Abre em uma nova guia">
                                         <span>CALL ME !!!</span>
                                     </Link>
                                     <picture>
