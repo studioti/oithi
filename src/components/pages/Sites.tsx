@@ -56,8 +56,8 @@ const Sites = () => {
                     sites.map( (item, index) => {
                         const size = sites.length
                         return (
-                            <section className={`${scss.sites} ${scss[item['nome']]} ${size}`} key={index}>
-                                <Site slug={item['nome']} titulo={item['titulo']} scssName='sites' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
+                            <section className={`${scss.sites} ${scss[item['nome']]} ${size}`} key={index} role={`case ${item['nome']}`} aria-relevant="all">
+                                <Site slug={item['nome']} titulo={item['titulo']} bg={`${scss.bg}`} scssBg='' scssPos={item['id']} scssSide={`${scss[item['coluna'] == 'esquerda' ? 'left' : 'right']}`} scssAnchorUp={`${index == 0 ? 'projects' : 'site' + index}`} scssAnchorDown={`${index == size-1 ? 'footer' : 'site' + (index+2)}`} scssBox={scss.box} scssBoxPosition={scss.position} scssPrint={scss.print} />
                             </section>
                         )
                     })

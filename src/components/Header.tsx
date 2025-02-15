@@ -11,7 +11,7 @@ const Video = lazy(() => import('./pages/Video'))
 
 const Header = () => {
     return (
-        <header className={scss.header} id='header'>
+        <section className={scss.header} id='header' role='cabeçalho'>
 
             <Suspense fallback={<div>Carregando ...</div>}>
                 <div className={scss.video}>
@@ -32,9 +32,14 @@ const Header = () => {
                 <span className={scss.p40}></span>
             </div>
 
+            <picture>
+                <source	srcSet={'/index-header-mascara.webp'} type="image/webp"></source>
+                <img src={'/index-header-mascara.png'} alt={'Seja bem-vindo(a)'} title={'Seja bem-vindo(a)'} aria-label={'Seja bem-vindo(a)'}></img>
+            </picture>
+
             <h1>FRONTEND <br />DEVELOPER</h1>
 
-        </header>
+        </section>
     )
 }
 

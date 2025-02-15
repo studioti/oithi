@@ -9,7 +9,7 @@ import Script from "next/script"
 
 export const viewport: Viewport = {
     themeColor: 'black',
-    userScalable: false
+    userScalable: true
 }
 
 const bebasneue = Bebas_Neue({
@@ -198,6 +198,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                         data-cbid={domainGroupId}
                         data-blockingmode={`auto`}
                         type={`text/javascript`}
+                        crossOrigin="use-credentials"
                     />
                 }
             </head>

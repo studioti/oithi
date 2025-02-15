@@ -8,7 +8,7 @@ const Knowhow = ({...props}) => {
     // props somente leitura
     return (
         <>
-            <Col xs={12} lg={6} className={props.scssKnowhow}>
+            <Col xs={12} lg={6} className={props.scssKnowhow} role='habilidades'>
                 <div className={props.scssBox}>
                     <div>
                         <Figure>
@@ -18,7 +18,7 @@ const Knowhow = ({...props}) => {
                                 fluid
                             />
                         </Figure>
-                        <h3>Know-How</h3>
+                        <h2>Know-How</h2>
                         <ul>
                             <li><strong>Frontend:</strong> Vue.js (2 e 3) (Nuxt.js), React.js (Next.js), JavaScript (ES6+), TypeScript, HTML5, CSS3 (SASS, LESS), BootstrapVue, React Bootstrap.</li>
                             <li><strong>Performance & SEO:</strong> Técnicas de otimização, código modular e escalável.</li>
