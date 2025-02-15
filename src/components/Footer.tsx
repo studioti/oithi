@@ -14,7 +14,7 @@ const Video = lazy(() => import('./pages/Video'))
 
 const Footer = () => {
     return (
-        <section className={scss.footer} id='footer' role='rodapé'>
+        <section className={scss.footer} id='footer'>
 
             <Suspense fallback={<div>Carregando ...</div>}>
                 <div className={scss.video}>
@@ -33,8 +33,8 @@ const Footer = () => {
                     <Col xs={12} lg={6} className={scss.left}>
                         <div className={scss.box}>
                             <div>
-                                <h2>LET&rsquo;S <br /><u>TALK</u><span aria-label='lets talk?'>?</span></h2>
-                                <h2>GOT A <br /><u>PROJECT</u><span aria-label='got a project?'>?</span></h2>
+                                <h2>LET&rsquo;S <br /><u>TALK</u><span>?</span></h2>
+                                <h2>GOT A <br /><u>PROJECT</u><span>?</span></h2>
                             </div>
                         </div>
                     </Col>
@@ -47,7 +47,7 @@ const Footer = () => {
                             </Col>
                             <Col xs={12} className={scss.cta}>
                                 <div className={scss.box}>
-                                    <Link href='mailto:thiago.aguiar86@gmail.com' aria-label="Me mande um email">
+                                    <Link href='https://wa.me/5511952718004?text=Olá,%20Thiago!%20Tudo%20bem?%20Tenho%20interesse%20em%20te%20contratar!%20Você%20teria%20disponibilidade?' aria-label="Me chame no WhatsApp!">
                                         <span>CALL ME !!!</span>
                                     </Link>
                                     <picture>

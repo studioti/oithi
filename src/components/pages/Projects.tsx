@@ -11,7 +11,7 @@ const Video = lazy(() => import('./Video'))
 const Projects = () => {
     return (
         <>
-            <section className={scss.projects} id='projects' role='projetos recentes'>
+            <section className={scss.projects} id='projects'>
 
                 <Suspense fallback={<div>Carregando ...</div>}>
                     <div className={scss.video}>

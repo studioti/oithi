@@ -17,7 +17,7 @@ import { memo } from 'react'
 const About = () => {
     return (
         <>
-            <section className={scss.about} id='about' role='sobre mim'>
+            <section className={scss.about} id='about'>
                 <div className={scss.art}>
                     <span className={scss.p100}></span>
                     <span className={scss.p80}></span>

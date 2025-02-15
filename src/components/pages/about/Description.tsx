@@ -5,7 +5,7 @@ const Description = ({...props}) => {
     // props somente leitura
     return (
         <>
-            <Col xs={12} lg={6} className={props.scssDescription} role='detalhes profissionais'>
+            <Col xs={12} lg={6} className={props.scssDescription}>
                 <div className={props.scssBox}>
                     <div>
                         <picture>

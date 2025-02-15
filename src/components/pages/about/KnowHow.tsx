@@ -8,7 +8,7 @@ const Knowhow = ({...props}) => {
     // props somente leitura
     return (
         <>
-            <Col xs={12} lg={6} className={props.scssKnowhow} role='habilidades'>
+            <Col xs={12} lg={6} className={props.scssKnowhow}>
                 <div className={props.scssBox}>
                     <div>
                         <Figure>
