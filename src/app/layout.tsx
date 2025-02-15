@@ -186,7 +186,7 @@ const domainGroupId = process.env.NEXT_PUBLIC_COOKIEBOT_ID
  
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <html lang="pt-br" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable} ${poppins.variable}`}>
+        <html lang="pt" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable} ${poppins.variable}`}>
             <head>
                 {
                     process.env.NODE_ENV === 'production' && 

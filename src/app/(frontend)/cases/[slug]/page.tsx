@@ -50,7 +50,7 @@ const Cases = () => {
 
     return (
         <>
-            <section className={`${scss.case}`} id="cases" role="cases">
+            <section className={`${scss.case}`} id="cases">
 
                 <OverlayTrigger overlay={<Tooltip>Voltar ao início</Tooltip>} placement="bottom">
                     <span className={'seta_navegacao page'} aria-label="Ir para o começo do site">
