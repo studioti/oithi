@@ -28,7 +28,7 @@ const TransitionURL = ({href, label}: Props) => {
 
     return (
         <>
-            <div onClick={ handleClick } aria-label={`Mostrar detalhes do case ${label}`} className="transition">{label}</div>
+            <div aria-label='Navegar' className="transition" onClick={ handleClick }>{label}</div>
         </>
     )
 }
