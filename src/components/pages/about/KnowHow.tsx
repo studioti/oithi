@@ -16,11 +16,11 @@ const Knowhow = ({...props}) => {
                         </picture>
                         <h2>Know-How</h2>
                         <ul>
-                            <li><strong role="heading" aria-level={2}>Frontend:</strong> Vue.js (Nuxt.js), React.js (Next.js), JavaScript (ES6+), TypeScript, HTML, CSS (SASS), Bootstrap, Tailwind CSS, Styled Components, E+.</li>
-                            <li><strong role="heading" aria-level={2}>Performance & SEO:</strong> Técnicas de otimização, código modular e escalável.</li>
-                            <li><strong role="heading" aria-level={2}>Versionamento & DevOps:</strong> Git, Git Flow, Conventional Commits, Docker.</li>
-                            <li><strong role="heading" aria-level={2}>Design & UX:</strong> Figma, Adobe XD, Mobile First, UI Responsiva e acessível, WCAG 2.1.</li>
-                            <li><strong role="heading" aria-level={2}>Metodologias:</strong> Scrum, Kanban, CI/CD, Clean Code, TDD.</li>
+                            <li><strong>Frontend:</strong> Vue.js (Nuxt.js), React.js (Next.js), JavaScript (ES6+), TypeScript, HTML, CSS (SASS), Bootstrap, Tailwind CSS, Styled Components, E+.</li>
+                            <li><strong>Performance & SEO:</strong> Técnicas de otimização, código modular e escalável.</li>
+                            <li><strong>Versionamento & DevOps:</strong> Git, Git Flow, Conventional Commits, Docker.</li>
+                            <li><strong>Design & UX:</strong> Figma, Adobe XD, Mobile First, UI Responsiva e acessível, WCAG 2.1.</li>
+                            <li><strong>Metodologias:</strong> Scrum, Kanban, CI/CD, Clean Code, TDD.</li>
                         </ul>
                     </div>
                 </div>

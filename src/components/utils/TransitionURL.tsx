@@ -28,7 +28,7 @@ const TransitionURL = ({href, label}: Props) => {
 
     return (
         <>
-            <div className="transition" onClick={ handleClick } role="button" tabIndex={-1}>{label}</div>
+            <div className="transition" onClick={ handleClick } role="button">{label}</div>
         </>
     )
 }
