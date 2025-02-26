@@ -15,7 +15,7 @@ ABOUT
     align-items: center;
     align-self: center;
     justify-content: center;
-    background-color: variables.$seventeen;
+    background-color: variables.$primary;
     overflow: hidden;
     z-index: 999;
     p, li, span {
@@ -40,12 +40,11 @@ ABOUT
         padding: 0 0 .4em 0;
     }
     h2 {
-        // font-family: "MS Madi", Arial, Helvetica, sans-serif;
         font-family: var(--font-msmadi);
         font-size: 2.8em;
         line-height: 1.2em;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     img {
         margin: 0;
@@ -88,6 +87,15 @@ ABOUT
         }
         .knowhow {
             text-align: center;
+            picture {
+                height: 150px;
+                margin: 0 auto 10px;
+                display: flex;
+                align-items: center;
+                align-self: center;
+                justify-content: center;
+                overflow: hidden;
+            }
             img {
                 height: 120px;
             }
@@ -109,9 +117,9 @@ ABOUT
         display: flex;
         width: 100%;
         height: 100%;
-        padding-top: 30px;
+        padding-top: 20px;
         padding-bottom: 20px;
-        align-items: flex-start;
+        align-items: self-start;
         align-self: center;
         justify-content: center;
     }
@@ -123,7 +131,7 @@ ABOUT
         align-self: center;
         justify-content: center;
         picture {
-            margin: 15px 20px;
+            margin: 10px;
         }
     }
 }
@@ -158,8 +166,8 @@ ABOUT
         .content {
             .description,
             .knowhow {
-                padding-left: 50px;
-                padding-right: 50px;
+                padding-left: 40px;
+                padding-right: 40px;
             }
         }
     }
@@ -199,9 +207,10 @@ ABOUT
 @media (min-width: 1600px) {
     .about {
         .content {
+            .description,
             .knowhow {
-                padding-left: 80px;
-                padding-right: 80px;
+                padding-left: 70px;
+                padding-right: 70px;
             }
         }
     }

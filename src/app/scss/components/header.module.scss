@@ -8,7 +8,7 @@ HEADER
 
 .header {
     width: 100%;
-    height: 100dvh;
+    min-height: 600px;
     position: relative;
     text-align: center;
     display: flex;
@@ -29,13 +29,45 @@ HEADER
 		z-index: 50;
 	}
     h1 {
-        font-size: 6.4em;
-        line-height: .9em;
+        font-size: 7em;
+        line-height: .85em;
         font-weight: 500;
-        color: variables.$black;
+        letter-spacing: -0.01em;
         position: relative;
         z-index: 100;
-        padding-top: .15em;
+        margin-top: 0.15em;
+        color: variables.$fifteen;
+        &::after, 
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-shadow: none;
+            background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F3DPAzwJxrwCre%2Fgiphy.gif&f=1&nofb=1&ipt=dc4dd2260b9ccecc06fc391c3c781a47f6dd210b6e9d1d80c61beb36b618cdc9&ipo=images);
+            background-clip: text;
+            color: transparent;
+            mix-blend-mode: lighten;
+            pointer-events: none;
+          }
+          &::before {
+            left: -4px;
+            mix-blend-mode: lighten;
+          }
+        span {
+            position: relative;
+            display: block;
+            font-size: inherit;
+            line-height: .85em;
+            font-weight: inherit;
+            letter-spacing: -0.01em;
+            color: variables.$fifteen;
+            &::before,
+            &::after {
+                color: variables.$fifteen;
+                background-color: transparent;
+            }
+        }
     }
     .video {
         position: absolute;
@@ -47,63 +79,13 @@ HEADER
         margin: 0;
         padding: 0;
     }
-    .art {
-        position: absolute;
-        top: 1%;
-        left: 0;
-        width: 45px;
-        height: 98%;
-        z-index: 60;
-        display: none;
-        &::after {
-			content: '';
-			position: absolute;
-			top: 50%;
-            right: -85px;
-			margin: -40px 0 0 -40px;
-			width: 80px;
-			height: 80px;
-			background: url('/seta-cima.svg') center no-repeat;
-			background-size: 100% auto;
-            transform: rotate(90deg);
-		}
-        span {
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-            position: absolute;
-            width: 10px;
-            height: 100%;
-            background-color: variables.$black;
-        }
-        .p100 {
-            top: 0;
-            left: 1px;
-        }
-        .p80 {
-            top: 10%;
-            left: 12px;
-            height: 80%;
-        }
-        .p60 {
-            top: 20%;
-            left: 23px;
-            height: 60%;
-        }
-        .p40 {
-            top: 30%;
-            left: 34px;
-            height: 40%;
-        }
-    }
     picture {
+        display: none;
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        // border: 1px dotted greenyellow;
         z-index: 50;
         img {
             position: absolute;
@@ -125,6 +107,7 @@ HEADER
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .header {
+        height: 100dvh;
         h1 {
             font-size: 12em;
             line-height: .9em;
@@ -136,8 +119,7 @@ HEADER
 @media (min-width: 992px) {
     .header {
         h1 {
-            font-size: 17em;
-            line-height: .9em;
+            font-size: 18em;
         }
         .art {
             display: block;

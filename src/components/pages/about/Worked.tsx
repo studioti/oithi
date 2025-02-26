@@ -47,10 +47,10 @@ const Worked = ({...props}) => {
 
     return (
         <>
-            <Col xs={12} lg={11} xxl={10} className={props.scssWorked}>
+            <Col xs={12} xxl={11} className={props.scssWorked}>
                 <div className={props.scssBox}>
                     <div>
-                        <h2>Trabalhou em:</h2>
+                        <h2>Experiências</h2>
                         <div className={props.scssEnterprise}>
                             {
                                 loading && 

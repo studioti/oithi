@@ -9,6 +9,7 @@ GLOBALS
 
 @use '~bootstrap/scss/bootstrap';
 @use 'variables';
+@use 'glitch.scss';
 
 html {
 	scroll-behavior: smooth;
@@ -29,17 +30,6 @@ body {
 	width: 100%;
 	color: variables.$primary;
 	background-color: variables.$seventeen;
-	&::before {
-		content: '';
-		width: 130px;
-		height: 1px;
-		background-color: variables.$fifteen;
-		position: fixed;
-		top: 50%;
-		right: 0;
-		margin: -1px 0 0 0;
-		z-index: 1000;
-	}
 	&::-webkit-scrollbar {
 		width: 2px;
 	}
@@ -62,7 +52,6 @@ section,
 	overflow-x: hidden;
 }
 h1, h2, h3, h4 {
-	// font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
 	font-family: var(--font-bebasneue);
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smooth: always;
@@ -266,6 +255,26 @@ ul, li {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+	body {
+		&::before,
+		&::after {
+			content: '';
+			width: 130px;
+			height: 1px;
+			background-color: variables.$fifteen;
+			position: fixed;
+			top: 50%;
+			margin: -1px 0 0 0;
+			z-index: 1000;
+		}
+		&::before {
+			content: none;
+			left: 0;
+		}
+		&::after {
+			right: 0;
+		}
+	}
 	.seta_navegacao {
 		&.error,
 		&.page,

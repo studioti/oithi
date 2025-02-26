@@ -8,7 +8,7 @@ PROJECTS
 
 .projects {
     width: 100%;
-    height: 100dvh;
+    min-height: 600px;
     position: relative;
     text-align: center;
     display: flex;
@@ -44,7 +44,6 @@ PROJECTS
         left: 50%;
         margin: -300px 0 0 -300px;
         z-index: 50;
-        // border: 1px dotted greenyellow;
         display: flex;
         align-items: center;
         align-self: center;
@@ -67,6 +66,7 @@ PROJECTS
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .projects {
+        height: 100dvh;
         h2 {
             font-size: 12em;
             line-height: .9em;

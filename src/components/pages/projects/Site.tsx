@@ -8,6 +8,18 @@ import { memo, Suspense } from 'react'
 
 const Site = ({...props}) => {
     // props somente leitura
+
+    // fullscreen
+    const imgMobileWebp = `/sites/bg-${props.slug}-mobile.webp`
+    const imgMobileJPG = `/sites/bg-${props.slug}-mobile.jpg`
+    const imgDesktopWebp = `/sites/bg-${props.slug}.webp`
+    const imgDesktopJPG = `/sites/bg-${props.slug}.jpg`
+
+    // print
+    const imgPrintAVIF = `/sites/bg-${props.slug}-print.avif`
+    const imgPrintWebp = `/sites/bg-${props.slug}-print.webp`
+    const imgPrintJPG = `/sites/bg-${props.slug}-print.jpg`
+
     return (
         <>
             <Suspense fallback={<div>Carregando ...</div>}>
@@ -30,22 +42,24 @@ const Site = ({...props}) => {
                     <div className={`${props.bg}`}>
                         <picture>
                             {/* <source	srcSet={`/sites/bg-${props.slug}.avif`} type="image/avif"></source> */}
-                            <source	srcSet={`/sites/bg-${props.slug}.webp`} type="image/webp"></source>
-                            <img src={`/sites/bg-${props.slug}.jpg`} alt={`${props.titulo}`} title={`${props.titulo}`} aria-label={`Case ${props.titulo}`}></img>
+                            <source media="(max-width:767px)" srcSet={imgMobileWebp} type="image/webp" />
+                            <source media="(max-width:767px)" srcSet={imgMobileJPG} type="image/jpg" />
+                            <source	srcSet={imgDesktopWebp} type="image/webp" />
+                            <img src={imgDesktopJPG} alt={`${props.titulo}`} title={`${props.titulo}`} aria-label={`${props.titulo}`} />
                         </picture>
                     </div>
 
                     {/* index case */}
                     <div className={props.scssBoxPosition}>
-                        <span>0{props.scssPos}</span>
+                        <span role="none">0{props.scssPos}</span>
                     </div>
 
                     {/* print mobile case */}
                     <div className={props.scssPrint}>
                         <picture>
-                            <source	srcSet={`/sites/bg-${props.slug}-print.avif`} type="image/avif"></source>
-                            <source	srcSet={`/sites/bg-${props.slug}-print.webp`} type="image/webp"></source>
-                            <img src={`/sites/bg-${props.slug}-print.jpg`} alt={`${props.titulo}`} title={`${props.titulo}`} aria-label={`Case ${props.titulo}`}></img>
+                            <source	srcSet={imgPrintAVIF} type="image/avif"></source>
+                            <source	srcSet={imgPrintWebp} type="image/webp"></source>
+                            <img src={imgPrintJPG} alt={`${props.titulo}`} title={`${props.titulo}`} aria-label={`Case ${props.titulo}`}></img>
                         </picture>
                     </div>
                 </div>

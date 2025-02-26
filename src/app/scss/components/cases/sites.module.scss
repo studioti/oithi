@@ -8,7 +8,7 @@ SITES
 
 .sites {
     width: 100%;
-    height: 100dvh;
+    min-height: 600px;
     position: relative;
     text-align: center;
     display: flex;
@@ -16,10 +16,19 @@ SITES
     align-self: center;
     justify-content: center;
     overflow: hidden;
-    background-color: variables.$black;
     z-index: 999;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background-color: variables.$patternColor1;
+        z-index: 100;
+    }
     h2 {
-        font-size: 6.4em;
+        font-size: 5em;
         line-height: .95em;
         font-weight: 500;
         letter-spacing: -0.02em;
@@ -58,7 +67,7 @@ SITES
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: variables.$secondary;
+            background-color: variables.$twenty;
             opacity: .4;
             z-index: 1;
         }
@@ -77,14 +86,14 @@ SITES
             height: 100%;
             margin: 0;
             overflow: hidden;
-            opacity: .8;
+            // opacity: .7;
             img {
                 position: absolute;
                 top: 0;
-                left: 50%;
-                width: 1920px;
-                height: 1080px;
-                margin: 0 0 0 -960px;
+                left: 0;
+                width: 750px;
+                height: 950px;
+                margin: 0;
             }
         }
     }
@@ -189,13 +198,15 @@ SITES
         h2 {
             font-size: 9em;
         }
-        .position {
-            span {
-                display: block;
+        .bg {
+            picture {
+                img {
+                    width: 1920px;
+                    height: 1080px;
+                    left: 50%;
+                    margin: 0 0 0 -960px;
+                }
             }
-        }
-        .print {
-            display: block;
         }
     }
 }
@@ -203,11 +214,16 @@ SITES
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .sites {
+        height: 100dvh;
         .position {
             max-width: 550px;
             span {
+                display: block;
                 font-size: 35em;
             }
+        }
+        .print {
+            display: block;
         }
     }
 }
