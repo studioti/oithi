@@ -50,7 +50,7 @@ const Site = ({...props}) => {
                     </div>
 
                     {/* index case */}
-                    <div className={props.scssBoxPosition}>
+                    <div className={props.scssBoxPosition} role="none">
                         <span>0{props.scssPos}</span>
                     </div>
 

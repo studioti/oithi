@@ -5,6 +5,7 @@ import '@/app/scss/globals.scss'
 import scss from "@/app/scss/index.module.scss"
 import Cursor from "@/components/utils/Cursor"
 import { memo } from "react"
+import Script from "next/script"
 
 export const viewport: Viewport = {
     themeColor: 'black',
@@ -180,10 +181,26 @@ export const metadata: Metadata = {
     },
     manifest: `${process.env.NEXT_PUBLIC_BASE_URL}favicon/manifest.json`
 }
+
+const domainGroupId = process.env.NEXT_PUBLIC_COOKIEBOT_ID
  
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="pt" className={`${bebasneue.variable} ${msmadi.variable} ${poiretone.variable} ${bungeeinline.variable} ${poppins.variable}`}>
+            <head>
+                {
+                    process.env.NODE_ENV === 'production' && 
+                    <Script
+                        id={`Cookiebot`}
+                        async={true}
+                        src={`https://consent.cookiebot.com/uc.js`}
+                        strategy={`afterInteractive`}
+                        data-cbid={domainGroupId}
+                        data-blockingmode={`auto`}
+                        type={`text/javascript`}
+                    />
+                }
+            </head>
             <body className={scss.index}>
                 <Cursor />
                 {children}
